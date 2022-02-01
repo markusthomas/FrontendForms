@@ -1,0 +1,103 @@
+en,de,description,file,hash
+"is already in use so please choose another username","wird bereits verwendet, daher wählen Sie bitte einen anderen Benutzernamen aus",,site/modules/FrontendForms/valitron/customValidators.php,5dd80c9d209051243e4959d64001d57a
+"and username do not match","und Benutzername passen nicht zusammen",,site/modules/FrontendForms/valitron/customValidators.php,3229770810a6a1a1718b75115246b5ff
+"does not meet the conditions","erfüllt nicht die Bedingungen",,site/modules/FrontendForms/valitron/customValidators.php,a19a1f724a26244cf7542e78fce6082d
+"contains not allowed characters (Please use only lowercase digits, numbers, underscore, periods and hyphen and no whitespaces)","enthält nicht erlaubte Zeichen (bitte verwenden Sie nur Kleinbuchstaben, Zahlen, Unterstrich, Punkte und Bindestriche und keine Leerzeichen)",,site/modules/FrontendForms/valitron/customValidators.php,76e8868bf761df8ac58a00d815a79c31
+"is already in use so please use another email address.","wird bereits verwendet, daher wählen Sie bitte eine andere E-Mail Adresse aus",,site/modules/FrontendForms/valitron/customValidators.php,b413595e71b40c70836a66e8f056896d
+"entered is not the same password as the one, that is stored in the database",", welches eingegeben wurde ist nicht das Gleiche, welches in der Datenbank gespeichert ist",,site/modules/FrontendForms/valitron/customValidators.php,8233c64b0291b99ef0d07c47db79105a
+"and email do not match","und E-Mail passen nicht zusammen",,site/modules/FrontendForms/valitron/customValidators.php,90c16357ff18d8fcc293125326b677b3
+"is not Boolean true","ist nicht Boolean true",,site/modules/FrontendForms/valitron/customValidators.php,abf3b0cec80ccb2d4566a6261246e663
+"is not Boolean false","ist nicht Boolean false",,site/modules/FrontendForms/valitron/customValidators.php,82e64791d4a2fc245441b452d8c01206
+"does not have the expected value","entspricht nicht den vorgegebenen Wert",,site/modules/FrontendForms/valitron/customValidators.php,128d6324f673627af8028138001238d9
+"is not correct","ist nicht korrekt",,site/modules/FrontendForms/valitron/customValidators.php,171f609c4663182c03be73b1e40fa35e
+"entered must be different than the value specified",", welches eingegeben wurde, muss einen anderen als den vorgegebenen Wert haben",,site/modules/FrontendForms/valitron/customValidators.php,d5aa7f638be76a8922285c2a5fffe4c7
+"entered must be different from the old password","muss unterschiedlich gegenüber dem alten Passwort sein",,site/modules/FrontendForms/valitron/customValidators.php,9dc911237765edb7f22808f0b2102b63
+en,de,description,file,hash
+Email,E-Mail,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Email.php,ce8ae9da5b7cd6c3df2929543a9af92d
+en,de,description,file,hash
+"Thank you for your message.","Vielen Dank für Ihre Nachricht.","set default success message",site/modules/FrontendForms/Formelements/Form.php,a0e0f33630289d49200c61cac7900200
+"Sorry, some errors occur. Please check your inputs once more.","Es sind leider Fehler aufgetreten. Bitte überprüfen Sie Ihre Eingaben noch einmal.","set default error message",site/modules/FrontendForms/Formelements/Form.php,552663e8ba6eb0a7c5c16727f8d19bcc
+"All fields marked with (*) are mandatory and must be completed.","Alle Felder, welche mit (*) markiert sind, stellen Pflichtfelder dar und müssen in jeden Fall ausgefüllt werden.",,site/modules/FrontendForms/Formelements/Form.php,feaed8b52507d421a9953e0a9ec9a687
+"This email is automatically generated, therefore please do not reply.","Diese E-Mail wurde automatisch erstellt. Bitte antworten Sie daher nicht auf diese E-Mail Adresse.",,site/modules/FrontendForms/Formelements/Form.php,d7ff2a96f26c30b30b2a332235504b51
+"Please do not fill out this field","Bitte dieses Feld nicht ausfüllen","length must be 0 = empty",site/modules/FrontendForms/Formelements/Form.php,e02d8cd38e0f708a9633f46793e31a27
+years,Jahre,,site/modules/FrontendForms/Formelements/Form.php,75aeb98e5241592ad6a6c2c4c78a16ef
+weeks,Wochen,,site/modules/FrontendForms/Formelements/Form.php,ae60f11ab51860bdb22794a943335a34
+days,Tage,,site/modules/FrontendForms/Formelements/Form.php,44fdec47036f482b68b748f9d786801b
+hours,Stunden,,site/modules/FrontendForms/Formelements/Form.php,73cdddd7730abfc13a55efb9f5685a3b
+minutes,Minuten,,site/modules/FrontendForms/Formelements/Form.php,640fd0cc0ffa0316ae087652871f4486
+seconds,Sekunden,,site/modules/FrontendForms/Formelements/Form.php,783e8e29e6a8c3e22baa58a19420eb4f
+year,Jahr,,site/modules/FrontendForms/Formelements/Form.php,84cdc76cabf41bd7c961f6ab12f117d8
+week,Woche,,site/modules/FrontendForms/Formelements/Form.php,172a8327fcd3685ab3c0f740d031da09
+day,Tag,,site/modules/FrontendForms/Formelements/Form.php,628b7db04235f228d40adc671413a8c8
+hour,Stunde,,site/modules/FrontendForms/Formelements/Form.php,896c55cc5e46fab38ce9f51ebf7bfcd3
+minute,Minute,,site/modules/FrontendForms/Formelements/Form.php,0a7d55be9d12a369a6a8da0fb517fba4
+second,Sekunde,,site/modules/FrontendForms/Formelements/Form.php,a9f0e61a137d86aa9db53465e0801612
+and,und,,site/modules/FrontendForms/Formelements/Form.php,be5d5d37542d75f93a87094459f76678
+"seconds left","Sekunden verbleiben",,site/modules/FrontendForms/Formelements/Form.php,c2d918e53348ee8896137bec79036f84
+"second left","Sekunde verbleibt",,site/modules/FrontendForms/Formelements/Form.php,1793e600a6822489f25244c196a05085
+"You have submitted the form within %s. This seems pretty fast for a human. Your behavior is more similar to a Spam bot. Please wait at least %s until you submit the form once more.","Sie haben das Formular innerhalb von %s ausgefüllt. Das ist ziemlich schnell und deutet eher auf einen Spam Bot hin als auf eine echte Person. Bitte lassen Sie sich wenigstens %s Zeit bevor Sie das Formular erneut absenden.",,site/modules/FrontendForms/Formelements/Form.php,1196c16ef68e26acc46dae99fcc50522
+attempts,Versuche,,site/modules/FrontendForms/Formelements/Form.php,79845fb11e473b1a0811ca2543f04b9c
+attempt,Versuch,,site/modules/FrontendForms/Formelements/Form.php,1db222fece0e7454c122788bf892adf8
+"You have %s %s left until you will be blocked due to security reasons.","Sie haben noch %s %s übrig, bis Sie aus Sicherheitsgründen gesperrt werden.",,site/modules/FrontendForms/Formelements/Form.php,45010ad705310127fdc90740a9ffd232
+"You have reached the max. number of allowed attempts and therefore you cannot submit the form once more. To reset the blocking and to submit the form anyway you have to close this browser, open it again and visit this page once more.","Sie haben die max. Anzahl von Versuchen erreicht und aus diesem Grund können Sie das Formular nun nicht mehr absenden. Um die Sperrung aufzuheben und das Formular dennoch abzusenden schließen Sie bitte den Browser, öffnen ihn erneut und besuchen Sie diese Seite noch einmal.",,site/modules/FrontendForms/Formelements/Form.php,9604672fb8882c926b1fcf42c89576d7
+"You have submitted the form after %s. This seems pretty slow for a human. Your behavior is more similar to a Spam bot. Please submit the form within %s the next time. You are blocked now and you have to close the browser to unlock, open it again and visit this page once more.","Sie haben das Formular erst nach %s abgesendet. Das ist ziemlich langsam und deutet eher auf einen Spam Bot als auf eine echte Person hin. Bitte senden Sie das Formular das nächste Mal innerhalb von %s ab. Sie sind nun gesperrt. Um die Sperrung aufzuheben schließen Sie bitte Ihren Browser, öffnen ihn erneut und besuchen Sie diese Seite noch einmal.",,site/modules/FrontendForms/Formelements/Form.php,2447d344db3fb15973b24ddd51a615b8
+en,de,description,file,hash
+"Global settings","Globale Einstellungen",,site/modules/FrontendForms/FrontendForms.module,108490afa8365531d5eade07c3cc38f4
+"Make your global settings according to your preferences.","Setzen Sie die globalen Einstellungen anhand Ihrer Präferenzen.",,site/modules/FrontendForms/FrontendForms.module,f001f2c629a1b862d9f5330eaf01f9f8
+"Required fields setting","Pflichtfelder Einstellungen",,site/modules/FrontendForms/FrontendForms.module,d159aa88cb827bf0011a041e90b5567d
+"Add asterisk on required fields","Einen Asterisk bei Pflichtfeldern hinzufügen",,site/modules/FrontendForms/FrontendForms.module,cfb2041be23a5d67d9a2ab9b55afc30a
+"Adds a span element with an asterisk after the field label on required fields.","Fügt ein span Element mit einem Asterisk nach dem Label Tag bei Pflichtfeldern ein.",,site/modules/FrontendForms/FrontendForms.module,5a794347b17c4bfc0712504a53c9c4de
+"You can also use CSS pseudo class :after to add an asterisk to the label tag. For this reason you can disable the asterisk markup.","Sie können auch die CSS Pseudo-Klasse :after nutzen um einen Asterisk nach dem Label Tag einzufügen. Aus diesem Grund können Sie die Einfügung des Asterisk Mark-up unterbinden.",,site/modules/FrontendForms/FrontendForms.module,52fe89faf69cb2128424b868ece04de9
+None,kein,,site/modules/FrontendForms/FrontendForms.module,6adf97f83acf6453d4a6a4b1070f3754
+Top,oben,,site/modules/FrontendForms/FrontendForms.module,a4ffdcf0dc1f31b9acaf295d75b51d00
+Bottom,unten,,site/modules/FrontendForms/FrontendForms.module,2ad9d63b69c4a10a5cc9cad923133bc4
+"Disable displaying of the text (none), place the text before (top) or after (bottom) the form.","Die Anzeige des Textes unterbinden (kein), den Text vor (oben) oder nach (unten) dem Formular anzeigen.",,site/modules/FrontendForms/FrontendForms.module,8842b7eaca395f94ccf4247a3dec7fb2
+"Enable/disable the display of the required text and set the position","Anzeigen/verstecken der Anzeige des Textes für die Pflichtfelder und Festsetzung der Position",,site/modules/FrontendForms/FrontendForms.module,419482be203a6d6e6ca5dfab534db3c4
+"Can be overwritten on each form.","Kann bei jedem Formular überschrieben werden.",,site/modules/FrontendForms/FrontendForms.module,a310d89389c61c1262dc8b170e54b418
+"Remove wrappers from the form fields","Wrapper vom Formularfeld entfernen",,site/modules/FrontendForms/FrontendForms.module,12bb4097ffabbb810dbd25d9d5186d83
+"Remove wrapper div from inputfield (input wrapper)","Den umgebenden Div-Container vom Inputfeld entfernen (input wrapper)",,site/modules/FrontendForms/FrontendForms.module,5f168fdf4aa3fae4a28ff0161df2922c
+"Remove outer wrapper from each formfield (field wrapper)","Den umgebenden, äußersten Div-Container vom gesamten Formularfeld entfernen (field wrapper)",,site/modules/FrontendForms/FrontendForms.module,5e29a260cd765ca80ea487af068c1b26
+"Javascript setting","JavaScript Einstellung",,site/modules/FrontendForms/FrontendForms.module,c454d41006c3a47ef050056608a6b7d9
+"Remove frontendforms.js from template","Die Einbindung der JavaScript Datei frontendform.js beim Template unterbinden",,site/modules/FrontendForms/FrontendForms.module,408055a818bddf79f9d303fca270a4d4
+"A small JavaScript for a seconds counter and show/hide passwords will be added to the template by default before the closing body tag. You can remove it by checking the box.","Eine kleine JavaScript Datei für einen Sekundenzähler und für die anzeigen/verstecken Funktion bei Passwortfeldern wird vor dem schließenden Body Tag im Template eingefügt. Durch Markieren der Box kann dies unterbunden werden.",,site/modules/FrontendForms/FrontendForms.module,66962fb2a0ec9c78cce2a46df5613175
+"HTML5 required attribute setting","HTML5 Pflichtfeld Attribut Einstellungen",,site/modules/FrontendForms/FrontendForms.module,9354ec4ea74a63b6b84ec8f7dab4f5a9
+"Add HTML5 required attribute to inputs","HTML5 required Attribute zu Eingabefeldern hinzufügen",,site/modules/FrontendForms/FrontendForms.module,224e7105ad450ae2ed2358c26078d8aa
+"By default the HTML5 required attribute will not be added to form inputs if they are required. If you want to add it to all required fields please check the box.","Standardmäßig wird das HTML5 Attribute required nicht bei Pflichtfeldern eingebunden. Wenn Sie dieses Attribut einfügen wollen, dann markieren Sie bitte diese Box.",,site/modules/FrontendForms/FrontendForms.module,f6fa51f65c1493aa0e1310fef5d833a4
+"Output rendering","Ausgabe rendern",,site/modules/FrontendForms/FrontendForms.module,e22428c686e2484d13fe958b6dd96ded
+"Select a framework for the markup output if you want","Wählen Sie ein Framework aus, wenn Sie möchten",,site/modules/FrontendForms/FrontendForms.module,14b846454644dd336e00af738a46bf19
+"No framework",Keines,,site/modules/FrontendForms/FrontendForms.module,672c694e3c32de003ed77fa07f6420cc
+"HTML email template setting","HTML E-Mail Template Einstellungen",,site/modules/FrontendForms/FrontendForms.module,7ba64fb164e72d97660308b67acfefbe
+"no HTML template","kein HTML Template",,site/modules/FrontendForms/FrontendForms.module,7a646761a1d8fa416125a58d609c221d
+"Choose whether you want to use the HTML template for your emails and if so, which one.","Entscheiden Sie, ob Sie ein HTML Template für Ihre E-Mails verwenden wollen, oder nicht",,site/modules/FrontendForms/FrontendForms.module,cebf3687d25bd4915ed8816bf8f91604
+"If you are using FrontendForms with the PW WireMail class to send emails, you can use a HTML email template by adding the addEmailTemplate() method to the WireMail object.","Wenn Sie FrontendForms mit der ProcessWire WireMail Klasse zum E-Mail Versand verwenden, dann können Sie zum Versand ein HTML Template verwenden indem Sie die mailTemplate() Methode mit dem WireMail Objekt verwenden.",,site/modules/FrontendForms/FrontendForms.module,11d754ee1189767f57cc5cc48e82f436
+"CSS class for the %s","CSS Klasse für %s",,site/modules/FrontendForms/FrontendForms.module,3e17fd7790ba1feceace786e775d2ba7
+"Custom CSS classes","Eigene CSS Klasse",,site/modules/FrontendForms/FrontendForms.module,2aa8d951a33a4ede2260e61e9030b6d7
+"You can overwrite each default CSS class with your own class name(s). If you want to add multiple classes at the same time please separate them with a whitspace (fe class1 class2).","Sie können jede CSS Klasse mit ihren eigenen Bezeichnungen überschreiben. Wenn Sie gleichzeitig mehrere Klassen hinzufügen möchten, dann trennen Sie diese bitte mit einem Leerzeichen (z.B. class1 class2).",,site/modules/FrontendForms/FrontendForms.module,70f2a7e0486c10b2feb382c67555a482
+"Default is:",Standard-Klasse:,,site/modules/FrontendForms/FrontendForms.module,670fea5dc2d7d54a80c95b2efa9ba83c
+en,de,description,file,hash
+Gender,Anrede,,site/modules/FrontendForms/Formelements/Inputelements/Select/defaults/Gender.php,019ec3132cdf8ee0f2e2a75cf5d3e459
+Mister,Herr,,site/modules/FrontendForms/Formelements/Inputelements/Select/defaults/Gender.php,c4f448df316abb13eb7eada722c57902
+Miss,Frau,,site/modules/FrontendForms/Formelements/Inputelements/Select/defaults/Gender.php,e7ddb7cd777b59610b220bcfa80bd95f
+en,de,description,file,hash
+"The password must be at least %s characters and must contain characters of the following categories: %s.","Das Passwort muss mindestes %s Zeichen lang sein und folgende Zeichen enthalten: %s.",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/InputPassword.php,8bc6641f570b88866300ca703223bf6b
+"The password must be at least %s characters.","Das Passwort muss mindestes %s Zeichen lang sein.",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/InputPassword.php,3d55c273179acb11e30d1a53f8d8625e
+"Show password","Passwort anzeigen",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/InputPassword.php,a1cc7ba89ca3016cf59d7c31506a9681
+en,de,description,file,hash
+Message,Nachricht,,site/modules/FrontendForms/Formelements/Inputelements/Textarea/defaults/Message.php,4c2a8fe7eaf24721cc7a9f0175115bd4
+en,de,description,file,hash
+Name,Vorname,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Name.php,49ee3087348e8d44e1feda1917443987
+en,de,description,file,hash
+Password,Passwort,"set default label",site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Password.php,dc647eb65e6711e155375218212b3964
+en,de,description,file,hash
+"Password Confirmation","Passwort Bestätigung","set default label",site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/PasswordConfirmation.php,c2b7527a6421ad4a0c0089d87290d1cd
+en,de,description,file,hash
+"I accept the privacy policy","Ich akzeptiere die Datenschutzrichtlinien",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Privacy.php,28f678f8feb29d236b6dfcb02190ba21
+"You have to accept our privacy policy","Sie müssen die Datenschutzrichtlinien akzeptieren",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Privacy.php,9a5b98e025ebe5fd1adbddccc94ad638
+en,de,description,file,hash
+"Send a copy of my message to me","Eine Kopie dieser Nachricht an mich senden",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/SendCopy.php,7313e5cce02f10d1d6a22dea1aedc9eb
+en,de,description,file,hash
+Subject,Betreff,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Subject.php,c7892ebbb139886662c6f2fc8c450710
+en,de,description,file,hash
+Surname,Nachname,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Surname.php,8e55577a8ed3b20bff65d23c000280d4
+en,de,description,file,hash
+Username,Benutzername,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Username.php,f6039d44b29456b20f8f373155ae4973

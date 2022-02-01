@@ -1,0 +1,461 @@
+<?php
+declare(strict_types = 1);
+namespace ProcessWire;
+
+class FrontendForms extends WireData implements Module, ConfigurableModule {
+
+    public $Validator;
+    protected $defaultClasses;
+    protected $emailTemplates = [];
+
+    protected $emailTemplatesPath = '';
+    protected $moduleUrl = '';
+    protected $modulePath = '';
+    protected $moduleConfig = []; //the module configuration as an array
+    protected $lang = 'en'; // set the default language for error messages
+    protected $mailPlaceholders = []; // array the holds all custom mail properties for placeholder attributes as placeholder => value
+
+    protected $moduleDirectories = [
+      'Formelements',
+      'Formelements\Textelements',
+      'Formelements\Inputelements',
+      'Formelements\Inputelements\Inputs',
+      'Formelements\Inputelements\Inputs\defaults',
+      'Formelements\Inputelements\Select',
+      'Formelements\Inputelements\Select\defaults',
+      'Formelements\Inputelements\Textarea',
+      'Formelements\Inputelements\Textarea\defaults',
+      'Formelements\Inputelements\Datalist',
+      'Formelements\Wrapper',
+      'Formelements\Miscellaneous',
+      'Forms'
+    ];
+
+
+
+    public static function getModuleInfo() {
+
+        return [
+          'title' => 'FrontendForms',
+          'summary' => 'Create forms and validate them using the Valitron library.',
+          'author' => "Jürgen Kern",
+          'href' => 'https://github.com/juergenweb/FrontendForms',
+          'version' => '2.0.1',
+          'singular' => true,
+          'autoload' => true,
+          'requires' => ['PHP>=7.2.0', 'ProcessWire>=3.0.181']
+        ];
+
+    }
+
+    public function __construct()
+    {
+        // set relative url to this module
+        $this->moduleUrl = $this->wire('config')->urls->$this;
+
+        // set relative path to this module
+        $this->modulePath = $this->wire('config')->paths->$this;
+
+        // set configuration settings
+        $data = $this->wire('modules')->getConfig($this->className); // fetch the config data from DB for this module
+        $this->moduleConfig = array_merge(self::getDefaultData(), $data); // merge with default data
+
+        // create properties of all configuration values
+        foreach($this->moduleConfig as $key => $value) $this->$key = $value;
+
+        //load the Valitron lib
+        if (!class_exists('Validator')){
+          require_once($this->modulePath . 'valitron' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Validator.php');
+        }
+
+        // set the path to the email templates folder
+        $this->emailTemplatesPath = $this->wire('config')->paths->$this.'email_templates';
+
+        // create numeric array of all available email templates inside the email folder
+        $this->getEmailTemplates();
+
+        // Instantiate Valitron
+        $this->Validator = new \Valitron\Validator();
+        $this->Validator::langDir(__DIR__.'/lang'); // always set langDir before lang.
+        $this->Validator::lang($this->getLang()); // set lang
+
+        // Include custom rules for the Valitron validation class
+        require_once($this->modulePath . 'valitron'.DIRECTORY_SEPARATOR.'customValidators.php');
+
+        // include the Autoloader class
+        require_once($this->modulePath . 'FrontendFormsAutoloader.php');
+        # nullify any existing autoloads
+        spl_autoload_register(null, false);
+
+        // load all module classes via autoloader
+        foreach($this->moduleDirectories as $dir){
+          spl_autoload_register(array(new FrontendFormsAutoloader($dir, wire('modules')->getModuleInfoProperty($this, 'name')), 'autoload'));
+        }
+
+        //get the currently loaded framework from the folder CSSClasses
+        $this->defaultClasses = json_decode(file_get_contents($this->modulePath.'CSSClasses/'.$this->input_framework));
+
+        /**
+        * Add new methods to the WireMail class for usage with sending emails
+        */
+
+        /**
+        * Method mailTemplate(string $name)
+        */
+        $this('wire')->addHookMethod('WireMail::mailTemplate', function($event) {
+        	$mail = $event->object;
+          $template = $event->arguments(0);
+          if($template != 'none')
+            $this->addEmailTemplate($mail, $template); // run only if a template was selected
+          return $mail;
+        });
+
+
+
+        /**
+        * add a new method to save a new property to the WireMailClass
+        * This can be used as to create new placeholders in email templates
+        */
+        $this('wire')->addHookMethod('WireMail::setPlaceholder', function($event) {
+          $mail = $event->object;
+          if($event->arguments(0) && $event->arguments(1)){
+            $placeholderName = trim((string) $event->arguments(0));
+            $value = trim((string) $event->arguments(1));
+            $this->setNewProperty($placeholderName, $value);
+          }
+
+          return $mail;
+        });
+
+        /**
+        * add the new property "title" to WireMailClass
+        * This can be used as additional information under the subject
+        */
+        $this('wire')->addHookMethod('WireMail::title', function($event) {
+
+          $mail = $event->object;
+          $title = $event->arguments(0);
+          $mail['title'] = trim((string)$title);
+          return $mail;
+
+        });
+
+    }
+
+    /**
+     * ready() hook
+     */
+    public function ready()
+    {
+      $this->addHookAfter('Page::render', $this, 'addAssets');
+    }
+
+    /**
+     * init() hook
+     */
+    public function init()
+    {
+
+    }
+
+    /**
+    * Merge new property to the mailProperties array
+    */
+    protected function setNewProperty(string $key, string $value)
+    {
+      $newProperty = ['{'.strtoupper($key).'}' => $value];
+      $this->mailProperties = array_merge($this->mailPlaceholders, $newProperty);
+    }
+
+    /**
+    * Render the email template including php code and output it as a string
+    * @param string $templatePath - the path to the template that should be rendered
+    * @return string - the html template in HTML
+    */
+    private function renderEmailTemplate(string $templatePath): string
+    {
+        ob_start();
+        include($templatePath);
+        $var=ob_get_contents();
+        ob_end_clean();
+        return $var;
+    }
+
+    protected function getMailPlaceholders(): array
+    {
+      return array_filter($this->mailPlaceholders);
+    }
+
+    protected function combineMailProperties(WireMail $mail): array
+    {
+      // Default placeholders for usage in mail templates
+      $defaultPlaceholders = [
+        '{TITLE}' => $mail->title,
+        '{SUBJECT}' => $mail->subject,
+        '{BODY}' => $mail->body,
+        '{USERNAME}' => wire('user')->name,
+        '{DOMAIN}' => wire('pages')->get('/')->httpUrl
+      ];
+      return array_merge($defaultPlaceholders, $this->getMailPlaceholders());
+    }
+
+    protected function replacePlaceholders(WireMail $mail, string $templateContent): string
+    {
+
+      $keys = array_keys($this->combineMailProperties($mail));
+      $values = array_values($this->combineMailProperties($mail));
+
+      $content =  str_replace($keys, $values, $templateContent);
+      // remove empty placeholder and return the content
+      return trim(preg_replace('/\s*\{[^)]*\}/', '', $content));
+
+    }
+
+    /**
+    * Method to add a email template to the WireMail class
+    * @param WireMail $mail - the mail object of the WireMail class
+    * @param string $templateName - the name of the template that should be used to render the email
+    * @return WireMail
+    */
+    protected function addEmailTemplate(WireMail $mail, string $templateName): WireMail
+    {
+
+      if($templateName !== 'none'){ // run only if a template was choosen
+        if($templateName === 'inherit')
+          $templateName = $this->input_emailTemplate; // use the template form FrontendForms settings
+        // check if an email template with this name exists
+        if(!in_array($templateName, $this->emailTemplates))
+          throw new \Exception("Email template with this name does not exist", 1);
+
+        $templateFile = $this->emailTemplatesPath.DIRECTORY_SEPARATOR.$templateName.DIRECTORY_SEPARATOR.$templateName.'.php';
+        if(!file_exists($templateFile))
+          throw new \Exception("The HTML template file does not exist", 1);
+        $templateContent =  $this->renderEmailTemplate($templateFile);
+
+        $templateContent = $this->replacePlaceholders($mail, $templateContent);
+        $mail->bodyHTML = $templateContent;
+      }
+
+      return $mail;
+
+    }
+
+
+    /**
+    * Get the names of all email templates inside the email_templates folder
+    * @return array - a numeric array of email template names
+    */
+    public function getEmailTemplates(): array
+    {
+      $templates = array_slice(scandir($this->emailTemplatesPath), 2);
+      $this->emailTemplates = $templates;
+      return $templates;
+    }
+
+
+    /**
+    * Add the module javascript file to the frontend before the closing body tag
+    */
+    public function addAssets(HookEvent $event)
+    {
+        $page = $event->object;
+
+        // load only on frontend
+        if ($page->template->name !== 'admin') {
+          if(!$this->input_removeJS){
+            $js = '<script src="' . $this->wire('config')->urls->$this . 'frontendforms.js' . '"></script>' . PHP_EOL;
+            $event->return = str_replace('</body>', $js . PHP_EOL . '</body>', $event->return);
+
+          }
+        }
+
+    }
+
+
+    /**
+    * Set the language as language code (fe en, de,..)
+    * Please take a look inside the lang folder which languages are available (the name of the folder is the language code)
+    * @param string $lang
+    */
+    public function setLang(string $lang)
+    {
+      $this->lang = trim($lang);
+      //overwrite the default language
+      $this->Validator::lang($this->lang); // set lang
+    }
+
+    /**
+    * Get the language code
+    * @return string
+    */
+    protected function getLang(): string
+    {
+      return $this->lang;
+    }
+
+    /**
+    * Default configuration for module
+    *
+    */
+    static public function getDefaultData() {
+       return [
+         "input_showasterisk" => 1,
+         "input_requiredHintPosition" => 'top',
+         "input_framework" => 'none.json',
+         "input_emailTemplate" => 'template_1',
+         "input_wrappers" => [],
+         "input_removeJS" => 0,
+         "input_addHTML5req" => 0
+       ];
+    }
+
+    /**
+	  * Module config
+	  * @param InputfieldWrapper $inputfields
+	  */
+    public function getModuleConfigInputfields(InputfieldWrapper $inputfields) {
+
+      $modules = $this->wire()->modules;
+
+      $fieldset1 = $modules->get('InputfieldFieldset');
+      $fieldset1->label = $this->_('Global settings');
+      $fieldset1->description = $this->_('Make your global settings according to your preferences.');
+
+        $showasterisk = $modules->get('InputfieldCheckbox');
+        $showasterisk->attr('name', 'input_showasterisk');
+        $showasterisk->attr('checked', $this->input_showasterisk == '1' ? 'checked' : '');
+    		$showasterisk->label = $this->_('Required fields setting');
+        $showasterisk->label2 = $this->_('Add asterisk on required fields');
+    		$showasterisk->description = $this->_('Adds a span element with an asterisk after the field label on required fields.');
+        $showasterisk->notes = $this->_('You can also use CSS pseudo class :after to add an asterisk to the label tag. For this reason you can disable the asterisk markup.');
+        $fieldset1->add($showasterisk);
+
+        $requiredHintPosition = $modules->get('InputfieldRadios');
+        $requiredHintPosition->attr('name', 'input_requiredHintPosition');
+        $requiredHintPosition->addOptions([
+          'none' => $this->_('None'),
+          'top' => $this->_('Top'),
+          'bottom' => $this->_('Bottom')
+        ]);
+        $requiredHintPosition->defaultValue = 'top';
+        $requiredHintPosition->required = 1;
+        $requiredHintPosition->attr('value', $this->input_requiredHintPosition);
+        $requiredHintPosition->description = $this->_('Disable displaying of the text (none), place the text before (top) or after (bottom) the form.');
+    		$requiredHintPosition->label = $this->_('Enable/disable the display of the required text and set the position');
+        $requiredHintPosition->notes = $this->_('Can be overwritten on each form.');
+        $fieldset1->add($requiredHintPosition);
+
+        $wrappers = $this->modules->get('InputfieldCheckboxes');
+        $wrappers->label = $this->_('Remove wrappers from the form fields');
+        $wrappers->name = 'input_wrappers';
+        $wrappers->addOption('inputwrapper', $this->_('Remove wrapper div from inputfield (input wrapper)'));
+        $wrappers->addOption('fieldwrapper', $this->_('Remove outer wrapper from each formfield (field wrapper)'));
+        $wrappers->value = $this->input_wrappers;
+        $fieldset1->add($wrappers);
+
+        $removeJS = $modules->get('InputfieldCheckbox');
+        $removeJS->attr('name', 'input_removeJS');
+        $removeJS->attr('checked', $this->input_removeJS == '1' ? 'checked' : '');
+        $removeJS->label = $this->_('Javascript setting');
+        $removeJS->label2 = $this->_('Remove frontendforms.js from template');
+        $removeJS->notes = $this->_('A small JavaScript for a seconds counter and show/hide passwords will be added to the template by default before the closing body tag. You can remove it by checking the box.');
+        $fieldset1->add($removeJS);
+
+        $addHTML5req = $modules->get('InputfieldCheckbox');
+        $addHTML5req->attr('name', 'input_addHTML5req');
+        $addHTML5req->attr('checked', $this->input_addHTML5req == '1' ? 'checked' : '');
+    		$addHTML5req->label = $this->_('HTML5 required attribute setting');
+        $addHTML5req->label2 = $this->_('Add HTML5 required attribute to inputs');
+    		$addHTML5req->notes = $this->_('By default the HTML5 required attribute will not be added to form inputs if they are required. If you want to add it to all required fields please check the box.');
+        $fieldset1->add($addHTML5req);
+
+        $frameworkSelect = $modules->get('InputfieldSelect');
+        $frameworkSelect->attr('name', 'input_framework');
+        $frameworkSelect->label = $this->_('Output rendering');
+        $frameworkSelect->description = $this->_('Select a framework for the markup output if you want');
+        $frameWorkFiles = scandir($this->modulePath . 'CSSClasses/');
+        unset($frameWorkFiles['none.json']);
+        array_unshift($frameWorkFiles,'none.json');
+        $frameWorkOptions= [];
+        foreach($frameWorkFiles as $option){
+          if ($option != '.' && $option != '..'){
+            $file_parts = pathinfo($option);
+            $ext = $file_parts['extension'];
+            if($ext == 'json'){
+              $label = ucfirst(str_replace('.json', '', $option));
+              if($label == 'None'){
+                $label = $this->_('No framework');
+              }
+              $frameWorkOptions[$option] = $label;
+
+            }
+          }
+        }
+        $frameworkSelect->addOptions(array_unique($frameWorkOptions));
+        $frameworkSelect->attr('value', $this->input_framework);
+        $frameworkSelect->required = 1;
+        $fieldset1->add($frameworkSelect);
+
+        // select an email template or not
+        if($this->emailTemplates){
+          $emailTemplate = $modules->get('InputfieldSelect');
+          $emailTemplate->label = $this->_('HTML email template setting');
+          $emailTemplate->attr('name', 'input_emailTemplate');
+          // create options
+          $templates = [];
+          $templates['none'] = $this->_('no HTML template');
+          foreach($this->emailTemplates as $template){
+            $name = explode('_', $template);
+            if(count($name) > 1){
+              array_walk($name, function(&$value, &$key) {
+                $value = ucfirst($value); // make all parts of the name starting with a capital letter
+              });
+              $name = implode(' ', $name);
+            } else {
+              $name = ucfirst($template);
+            }
+            $templates[$template] = $name;
+          }
+          $emailTemplate->addOptions($templates);
+          $emailTemplate->attr('value', $this->input_emailTemplate);
+          $emailTemplate->required = 1;
+          $emailTemplate->description = $this->_('Choose whether you want to use the HTML template for your emails and if so, which one.');
+          $emailTemplate->notes = $this->_('If you are using FrontendForms with the PW WireMail class to send emails, you can use a HTML email template by adding the addEmailTemplate() method to the WireMail object.');
+          $fieldset1->add($emailTemplate);
+        }
+
+      $inputfields->add($fieldset1);
+
+      // get all class field names as an array
+      $cssClassFields = array_keys((array)$this->defaultClasses);
+
+      $fields = [];
+      foreach($cssClassFields as $field){
+        $label = substr(str_replace('_', ' ', $field), 0, -5);
+        $fields['input_'.$field] = sprintf($this->_('CSS class for the %s'), $this->_($label));
+      }
+
+      $fieldset = $modules->get('InputfieldFieldset');
+      $fieldset->label = $this->_('Custom CSS classes');
+      $fieldset->collapsed = 1; // by default, this fieldset should be collapsed
+      $fieldset->description = $this->_('You can overwrite each default CSS class with your own class name(s). If you want to add multiple classes at the same time please separate them with a whitspace (fe class1 class2).');
+
+      $number = 1;
+      foreach($fields as $fieldName => $label){
+        $fieldClass = substr($fieldName, 6);
+        ${'css-'.$number} = $modules->get('InputfieldText');
+        ${'css-'.$number}->label = $label;
+        ${'css-'.$number}->attr('name', $fieldName);
+        ${'css-'.$number}->attr('value', $this->$fieldName ? $this->$fieldName : '');
+
+        if(isset($this->defaultClasses->$fieldClass))
+          ${'css-'.$number}->notes($this->_('Default is:').' '.$this->defaultClasses->$fieldClass);
+        $fieldset->add(${'css-'.$number});
+        $number + 1;
+      }
+
+      $inputfields->add($fieldset);
+
+    }
+
+}
