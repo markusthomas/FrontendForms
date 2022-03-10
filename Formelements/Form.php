@@ -422,7 +422,7 @@ class Form extends Tag
     private function checkDoubleFormSubmission(WireInputData $input): bool
     {
         // assign submitted **secretFormValue** from your form to a local variable
-        $secretFormValue = isset($input->doubleSubmission_token) ? filter_var($input->doubleSubmission_token, FILTER_SANITIZE_STRING) : '';
+        $secretFormValue = isset($input->doubleSubmission_token) ? filter_var($input->doubleSubmission_token, FILTER_UNSAFE_RAW) : '';
         // check if the value is present in the **secretFormValue** variable
         if ($secretFormValue != '') {
             // check if both values are the same
@@ -477,19 +477,20 @@ class Form extends Tag
    */
     private function secondsToReadable(int $secs): string
     {
-        // plural inside _n() method will not be fetched so lets put it outside
+        //  only one _n() method per line will be accepted, so put it outside
         $years = $this->_('years');
         $weeks = $this->_('weeks');
         $days = $this->_('days');
         $hours = $this->_('hours');
         $minutes = $this->_('minutes');
         $seconds = $this->_('seconds');
+
         $bit = [
-          ' ' . _n($this->_('year'), $years, $secs / 31556926 % 12) => $secs / 31556926 % 12,
-          ' ' . _n($this->_('week'), $weeks, $secs / 604800 % 52) => $secs / 604800 % 52,
-          ' ' . _n($this->_('day'), $days, $secs / 86400 % 7) => $secs / 86400 % 7,
-          ' ' . _n($this->_('hour'), $hours, $secs / 3600 % 24) => $secs / 3600 % 24,
-          ' ' . _n($this->_('minute'), $minutes, $secs / 60 % 60) => $secs / 60 % 60,
+          ' ' . _n($this->_('year'), $years, $secs / (round(31556926 % 12) ?: 1)) => $secs / (round(31556926 % 12) ?: 1),
+          ' ' . _n($this->_('week'), $weeks, $secs / (round(604800 % 52) ?: 1)) => $secs / (round(604800 % 52) ?: 1),
+          ' ' . _n($this->_('day'), $days, $secs / (round(86400 % 7) ?: 1)) => $secs / (round(86400 % 7) ?: 1),
+          ' ' . _n($this->_('hour'), $hours, $secs / (round(3600 % 24) ?: 1)) => $secs / (round(3600 % 24) ?: 1),
+          ' ' . _n($this->_('minute'), $minutes, $secs / (round(60 % 60) ?: 1)) => $secs / (round(60 % 60) ?: 1),
           ' ' . _n($this->_('second'), $seconds, $secs % 60) => $secs % 60
         ];
         foreach ($bit as $k => $v) {
