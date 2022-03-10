@@ -84,8 +84,6 @@ class FrontendForms extends WireData implements Module, ConfigurableModule {
 
         // include the Autoloader class
         require_once($this->modulePath . 'FrontendFormsAutoloader.php');
-        # nullify any existing autoloads
-        spl_autoload_register(null, false);
 
         // load all module classes via autoloader
         foreach($this->moduleDirectories as $dir){
