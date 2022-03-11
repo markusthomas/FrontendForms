@@ -472,39 +472,46 @@ class Form extends Tag
 
   /**
    * Convert seconds to human readable format like 1 minute and 20 seconds instead of 80 seconds
-   * @param int $secs - seconds
+   * @param int $ss - seconds
    * @return string
    */
-    private function secondsToReadable(int $secs): string
+    private function secondsToReadable(int $ss): string
     {
-        //  only one _n() method per line will be accepted, so put it outside
-        $years = $this->_('years');
-        $weeks = $this->_('weeks');
-        $days = $this->_('days');
-        $hours = $this->_('hours');
-        $minutes = $this->_('minutes');
-        $seconds = $this->_('seconds');
-
         $bit = [
-          ' ' . _n($this->_('year'), $years, $secs / (round(31556926 % 12) ?: 1)) => $secs / (round(31556926 % 12) ?: 1),
-          ' ' . _n($this->_('week'), $weeks, $secs / (round(604800 % 52) ?: 1)) => $secs / (round(604800 % 52) ?: 1),
-          ' ' . _n($this->_('day'), $days, $secs / (round(86400 % 7) ?: 1)) => $secs / (round(86400 % 7) ?: 1),
-          ' ' . _n($this->_('hour'), $hours, $secs / (round(3600 % 24) ?: 1)) => $secs / (round(3600 % 24) ?: 1),
-          ' ' . _n($this->_('minute'), $minutes, $secs / (round(60 % 60) ?: 1)) => $secs / (round(60 % 60) ?: 1),
-          ' ' . _n($this->_('second'), $seconds, $secs % 60) => $secs % 60
+         'month' => floor($ss / 2592000),
+         'day' => floor(($ss % 2592000) / 86400),
+         'hour' => floor(($ss % 86400) / 3600),
+         'minute' => floor(($ss % 3600) / 60),
+         'second' => $ss % 60
         ];
+
+        $labelSingular = ['month' => $this->_('month'),
+         'day' => $this->_('day'),
+         'hour' => $this->_('hour'),
+         'minute' => $this->_('minute'),
+         'second' => $this->_('second')];
+
+        $labelPlural = ['month' => $this->_('months'),
+         'day' => $this->_('days'),
+         'hour' => $this->_('hours'),
+         'minute' => $this->_('minutes'),
+         'second' => $this->_('seconds')];
+
         foreach ($bit as $k => $v) {
             $number = explode(' ', $v);
             if ($number[0] != 0) {
-                $ret[] = $v . $k;
+                $label = $this->_n($labelSingular[$k], $labelPlural[$k], $v);
+                $ret[] = $v . $label;
             }
         }
+
         if (count($ret) > 1) {
             array_splice($ret, count($ret) - 1, 0, $this->_('and'));
         }
 
         return join(' ', $ret);
     }
+
 
     /**
      * Check if max attemps are reached or not - true or false
