@@ -15,23 +15,24 @@ en,de,description,file,hash
 en,de,description,file,hash
 Email,E-Mail,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Email.php,ce8ae9da5b7cd6c3df2929543a9af92d
 en,de,description,file,hash
-"Thank you for your message.","Vielen Dank für Ihre Nachricht.","set default success message",site/modules/FrontendForms/Formelements/Form.php,a0e0f33630289d49200c61cac7900200
-"Sorry, some errors occur. Please check your inputs once more.","Es sind leider Fehler aufgetreten. Bitte überprüfen Sie Ihre Eingaben noch einmal.","set default error message",site/modules/FrontendForms/Formelements/Form.php,552663e8ba6eb0a7c5c16727f8d19bcc
+"Thank you for your message.","Vielen Dank für Ihre Nachricht.",,site/modules/FrontendForms/Formelements/Form.php,a0e0f33630289d49200c61cac7900200
+"Sorry, some errors occur. Please check your inputs once more.","Es sind leider Fehler aufgetreten. Bitte überprüfen Sie Ihre Eingaben noch einmal.",,site/modules/FrontendForms/Formelements/Form.php,552663e8ba6eb0a7c5c16727f8d19bcc
 "All fields marked with (*) are mandatory and must be completed.","Alle Felder, welche mit (*) markiert sind, stellen Pflichtfelder dar und müssen in jeden Fall ausgefüllt werden.",,site/modules/FrontendForms/Formelements/Form.php,feaed8b52507d421a9953e0a9ec9a687
 "This email is automatically generated, therefore please do not reply.","Diese E-Mail wurde automatisch erstellt. Bitte antworten Sie daher nicht auf diese E-Mail Adresse.",,site/modules/FrontendForms/Formelements/Form.php,d7ff2a96f26c30b30b2a332235504b51
-"Please do not fill out this field","Bitte dieses Feld nicht ausfüllen","length must be 0 = empty",site/modules/FrontendForms/Formelements/Form.php,e02d8cd38e0f708a9633f46793e31a27
-years,Jahre,,site/modules/FrontendForms/Formelements/Form.php,75aeb98e5241592ad6a6c2c4c78a16ef
-weeks,Wochen,,site/modules/FrontendForms/Formelements/Form.php,ae60f11ab51860bdb22794a943335a34
-days,Tage,,site/modules/FrontendForms/Formelements/Form.php,44fdec47036f482b68b748f9d786801b
-hours,Stunden,,site/modules/FrontendForms/Formelements/Form.php,73cdddd7730abfc13a55efb9f5685a3b
-minutes,Minuten,,site/modules/FrontendForms/Formelements/Form.php,640fd0cc0ffa0316ae087652871f4486
-seconds,Sekunden,,site/modules/FrontendForms/Formelements/Form.php,783e8e29e6a8c3e22baa58a19420eb4f
-year,Jahr,,site/modules/FrontendForms/Formelements/Form.php,84cdc76cabf41bd7c961f6ab12f117d8
+"Email could not be sent due to possible wrong email configuration settings.","E-Mail konnte aufgrund einer fehlerhaften Konfiguration in den Einstellungen nicht gesendet werden.",,site/modules/FrontendForms/Formelements/Form.php,72cf6df09879e3c5e34778bf6f1bc965
+"Please do not fill out this field","Bitte dieses Feld nicht ausfüllen",,site/modules/FrontendForms/Formelements/Form.php,e02d8cd38e0f708a9633f46793e31a27
+month,Monat,,site/modules/FrontendForms/Formelements/Form.php,7436f942d5ea836cb84f1bb2527d8286
 week,Woche,,site/modules/FrontendForms/Formelements/Form.php,172a8327fcd3685ab3c0f740d031da09
 day,Tag,,site/modules/FrontendForms/Formelements/Form.php,628b7db04235f228d40adc671413a8c8
 hour,Stunde,,site/modules/FrontendForms/Formelements/Form.php,896c55cc5e46fab38ce9f51ebf7bfcd3
 minute,Minute,,site/modules/FrontendForms/Formelements/Form.php,0a7d55be9d12a369a6a8da0fb517fba4
 second,Sekunde,,site/modules/FrontendForms/Formelements/Form.php,a9f0e61a137d86aa9db53465e0801612
+months,Monate,,site/modules/FrontendForms/Formelements/Form.php,da36cfaf48b9e19896e23e1207040d1e
+weeks,Wochen,,site/modules/FrontendForms/Formelements/Form.php,ae60f11ab51860bdb22794a943335a34
+days,Tage,,site/modules/FrontendForms/Formelements/Form.php,44fdec47036f482b68b748f9d786801b
+hours,Stunden,,site/modules/FrontendForms/Formelements/Form.php,73cdddd7730abfc13a55efb9f5685a3b
+minutes,Minuten,,site/modules/FrontendForms/Formelements/Form.php,640fd0cc0ffa0316ae087652871f4486
+seconds,Sekunden,,site/modules/FrontendForms/Formelements/Form.php,783e8e29e6a8c3e22baa58a19420eb4f
 and,und,,site/modules/FrontendForms/Formelements/Form.php,be5d5d37542d75f93a87094459f76678
 "seconds left","Sekunden verbleiben",,site/modules/FrontendForms/Formelements/Form.php,c2d918e53348ee8896137bec79036f84
 "second left","Sekunde verbleibt",,site/modules/FrontendForms/Formelements/Form.php,1793e600a6822489f25244c196a05085
