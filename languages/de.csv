@@ -1,201 +1,104 @@
 en,de,description,file,hash
-"You will receive this email, because you have registered for an account at %s on %s.","Sie erhalten diese E-Mail, weil Sie sich für ein Konto auf %s am %s registriert haben.",,site/modules/FrontendLogin/traits/activation.php,419100f780fd433803f3247ee2de6455
-"Please verify your account within %s. Without activation your account will be deleted on %s.","Bitte verifizieren Sie Ihr Konto innerhalb von %s. Ohne Aktivierung wird Ihr Konto am %s gelöscht.",,site/modules/FrontendLogin/traits/activation.php,61e7c2e820b1d9d69dd40c8b0032a6c2
-"To verify that you are the person, who has subscribed, please click the following link to complete your registration:","Um zu bestätigen, dass Sie die Person sind, die sich angemeldet hat, klicken Sie bitte auf den folgenden Link, um Ihre Registrierung abzuschließen:",,site/modules/FrontendLogin/traits/activation.php,cf1986ec32115661a001b36833bac622
-"If you did not registered for an account, please ignore this email.","Wenn Sie sich nicht für ein Konto registriert haben, dann können Sie diese E-Mail ignorieren.",,site/modules/FrontendLogin/traits/activation.php,5d2fbd139931d3dde599cb7d75e8f54f
-"Action required to activate your account","Aktion erforderlich, um Ihr Konto zu aktivieren",,site/modules/FrontendLogin/traits/activation.php,fc6b228c1c76a11ae16c0ae5cfdd61c8
-year,Jahr,,site/modules/FrontendLogin/traits/activation.php,84cdc76cabf41bd7c961f6ab12f117d8
-years,Jahre,,site/modules/FrontendLogin/traits/activation.php,75aeb98e5241592ad6a6c2c4c78a16ef
-month,Monat,,site/modules/FrontendLogin/traits/activation.php,7436f942d5ea836cb84f1bb2527d8286
-months,Monate,,site/modules/FrontendLogin/traits/activation.php,da36cfaf48b9e19896e23e1207040d1e
-day,Tag,,site/modules/FrontendLogin/traits/activation.php,628b7db04235f228d40adc671413a8c8
-days,Tage,,site/modules/FrontendLogin/traits/activation.php,44fdec47036f482b68b748f9d786801b
-hour,Stunde,,site/modules/FrontendLogin/traits/activation.php,896c55cc5e46fab38ce9f51ebf7bfcd3
-hours,Stunden,,site/modules/FrontendLogin/traits/activation.php,73cdddd7730abfc13a55efb9f5685a3b
-minute,Minute,,site/modules/FrontendLogin/traits/activation.php,0a7d55be9d12a369a6a8da0fb517fba4
-minutes,Minuten,,site/modules/FrontendLogin/traits/activation.php,640fd0cc0ffa0316ae087652871f4486
-second,Sekunde,,site/modules/FrontendLogin/traits/activation.php,a9f0e61a137d86aa9db53465e0801612
-seconds,Sekunden,,site/modules/FrontendLogin/traits/activation.php,783e8e29e6a8c3e22baa58a19420eb4f
+"is already in use so please choose another username","wird bereits verwendet, daher wählen Sie bitte einen anderen Benutzernamen aus",,site/modules/FrontendForms/valitron/customValidators.php,5dd80c9d209051243e4959d64001d57a
+"and username do not match","und Benutzername passen nicht zusammen",,site/modules/FrontendForms/valitron/customValidators.php,3229770810a6a1a1718b75115246b5ff
+"does not meet the conditions","erfüllt nicht die Bedingungen",,site/modules/FrontendForms/valitron/customValidators.php,a19a1f724a26244cf7542e78fce6082d
+"contains not allowed characters (Please use only lowercase digits, numbers, underscore, periods and hyphen and no whitespaces)","enthält nicht erlaubte Zeichen (bitte verwenden Sie nur Kleinbuchstaben, Zahlen, Unterstrich, Punkte und Bindestriche und keine Leerzeichen)",,site/modules/FrontendForms/valitron/customValidators.php,76e8868bf761df8ac58a00d815a79c31
+"is already in use so please use another email address.","wird bereits verwendet, daher wählen Sie bitte eine andere E-Mail Adresse aus",,site/modules/FrontendForms/valitron/customValidators.php,b413595e71b40c70836a66e8f056896d
+"entered is not the same password as the one, that is stored in the database",", welches eingegeben wurde ist nicht das Gleiche, welches in der Datenbank gespeichert ist",,site/modules/FrontendForms/valitron/customValidators.php,8233c64b0291b99ef0d07c47db79105a
+"and email do not match","und E-Mail passen nicht zusammen",,site/modules/FrontendForms/valitron/customValidators.php,90c16357ff18d8fcc293125326b677b3
+"is not Boolean true","ist nicht Boolean true",,site/modules/FrontendForms/valitron/customValidators.php,abf3b0cec80ccb2d4566a6261246e663
+"is not Boolean false","ist nicht Boolean false",,site/modules/FrontendForms/valitron/customValidators.php,82e64791d4a2fc245441b452d8c01206
+"does not have the expected value","entspricht nicht den vorgegebenen Wert",,site/modules/FrontendForms/valitron/customValidators.php,128d6324f673627af8028138001238d9
+"is not correct","ist nicht korrekt",,site/modules/FrontendForms/valitron/customValidators.php,171f609c4663182c03be73b1e40fa35e
+"entered must be different than the value specified",", welches eingegeben wurde, muss einen anderen als den vorgegebenen Wert haben",,site/modules/FrontendForms/valitron/customValidators.php,d5aa7f638be76a8922285c2a5fffe4c7
+"entered must be different from the old password","muss unterschiedlich gegenüber dem alten Passwort sein",,site/modules/FrontendForms/valitron/customValidators.php,9dc911237765edb7f22808f0b2102b63
 en,de,description,file,hash
-Login?,Anmelden?,,site/modules/FrontendLogin/pages/ActivationPage.php,3d60e1651d302a5aaf33325d3f7d6298
-"Your account has been successfully activated. %s","Ihr Konto wurde erfolgreich aktiviert. %s",,site/modules/FrontendLogin/pages/ActivationPage.php,52887f21a9faf4c39d9cbb10d06ff65c
-"Sorry, but something went wrong. This activation code has already been used, is not valid or was not found.","Leider ist irgendetwas schief gelaufen. Dieser Aktivierungscode wurde bereits verwendet, ist nicht gültig oder wurde nicht gefunden.",,site/modules/FrontendLogin/pages/ActivationPage.php,c5acad08c483b1c9f73b446a68e122d1
+Email,E-Mail,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Email.php,ce8ae9da5b7cd6c3df2929543a9af92d
 en,de,description,file,hash
-"Sorry, but no user was found with this code.","Es wurde leider kein Nutzer zu diesem Code gefunden.",,site/modules/FrontendLogin/traits/checkUser.php,c0b573f315326f74c6dd9e211f1c5973
+"Thank you for your message.","Vielen Dank für Ihre Nachricht.",,site/modules/FrontendForms/Formelements/Form.php,a0e0f33630289d49200c61cac7900200
+"Sorry, some errors occur. Please check your inputs once more.","Es sind leider Fehler aufgetreten. Bitte überprüfen Sie Ihre Eingaben noch einmal.",,site/modules/FrontendForms/Formelements/Form.php,552663e8ba6eb0a7c5c16727f8d19bcc
+"All fields marked with (*) are mandatory and must be completed.","Alle Felder, welche mit (*) markiert sind, stellen Pflichtfelder dar und müssen in jeden Fall ausgefüllt werden.",,site/modules/FrontendForms/Formelements/Form.php,feaed8b52507d421a9953e0a9ec9a687
+"This email is automatically generated, therefore please do not reply.","Diese E-Mail wurde automatisch erstellt. Bitte antworten Sie daher nicht auf diese E-Mail Adresse.",,site/modules/FrontendForms/Formelements/Form.php,d7ff2a96f26c30b30b2a332235504b51
+"Email could not be sent due to possible wrong email configuration settings.","E-Mail konnte aufgrund einer fehlerhaften Konfiguration in den Einstellungen nicht gesendet werden.",,site/modules/FrontendForms/Formelements/Form.php,72cf6df09879e3c5e34778bf6f1bc965
+"Please do not fill out this field","Bitte dieses Feld nicht ausfüllen",,site/modules/FrontendForms/Formelements/Form.php,e02d8cd38e0f708a9633f46793e31a27
+month,Monat,,site/modules/FrontendForms/Formelements/Form.php,7436f942d5ea836cb84f1bb2527d8286
+week,Woche,,site/modules/FrontendForms/Formelements/Form.php,172a8327fcd3685ab3c0f740d031da09
+day,Tag,,site/modules/FrontendForms/Formelements/Form.php,628b7db04235f228d40adc671413a8c8
+hour,Stunde,,site/modules/FrontendForms/Formelements/Form.php,896c55cc5e46fab38ce9f51ebf7bfcd3
+minute,Minute,,site/modules/FrontendForms/Formelements/Form.php,0a7d55be9d12a369a6a8da0fb517fba4
+second,Sekunde,,site/modules/FrontendForms/Formelements/Form.php,a9f0e61a137d86aa9db53465e0801612
+months,Monate,,site/modules/FrontendForms/Formelements/Form.php,da36cfaf48b9e19896e23e1207040d1e
+weeks,Wochen,,site/modules/FrontendForms/Formelements/Form.php,ae60f11ab51860bdb22794a943335a34
+days,Tage,,site/modules/FrontendForms/Formelements/Form.php,44fdec47036f482b68b748f9d786801b
+hours,Stunden,,site/modules/FrontendForms/Formelements/Form.php,73cdddd7730abfc13a55efb9f5685a3b
+minutes,Minuten,,site/modules/FrontendForms/Formelements/Form.php,640fd0cc0ffa0316ae087652871f4486
+seconds,Sekunden,,site/modules/FrontendForms/Formelements/Form.php,783e8e29e6a8c3e22baa58a19420eb4f
+and,und,,site/modules/FrontendForms/Formelements/Form.php,be5d5d37542d75f93a87094459f76678
+"seconds left","Sekunden verbleiben",,site/modules/FrontendForms/Formelements/Form.php,c2d918e53348ee8896137bec79036f84
+"second left","Sekunde verbleibt",,site/modules/FrontendForms/Formelements/Form.php,1793e600a6822489f25244c196a05085
+"You have submitted the form within %s. This seems pretty fast for a human. Your behavior is more similar to a Spam bot. Please wait at least %s until you submit the form once more.","Sie haben das Formular innerhalb von %s ausgefüllt. Das ist ziemlich schnell und deutet eher auf einen Spam Bot hin als auf eine echte Person. Bitte lassen Sie sich wenigstens %s Zeit bevor Sie das Formular erneut absenden.",,site/modules/FrontendForms/Formelements/Form.php,1196c16ef68e26acc46dae99fcc50522
+attempts,Versuche,,site/modules/FrontendForms/Formelements/Form.php,79845fb11e473b1a0811ca2543f04b9c
+attempt,Versuch,,site/modules/FrontendForms/Formelements/Form.php,1db222fece0e7454c122788bf892adf8
+"You have %s %s left until you will be blocked due to security reasons.","Sie haben noch %s %s übrig, bis Sie aus Sicherheitsgründen gesperrt werden.",,site/modules/FrontendForms/Formelements/Form.php,45010ad705310127fdc90740a9ffd232
+"You have reached the max. number of allowed attempts and therefore you cannot submit the form once more. To reset the blocking and to submit the form anyway you have to close this browser, open it again and visit this page once more.","Sie haben die max. Anzahl von Versuchen erreicht und aus diesem Grund können Sie das Formular nun nicht mehr absenden. Um die Sperrung aufzuheben und das Formular dennoch abzusenden schließen Sie bitte den Browser, öffnen ihn erneut und besuchen Sie diese Seite noch einmal.",,site/modules/FrontendForms/Formelements/Form.php,9604672fb8882c926b1fcf42c89576d7
+"You have submitted the form after %s. This seems pretty slow for a human. Your behavior is more similar to a Spam bot. Please submit the form within %s the next time. You are blocked now and you have to close the browser to unlock, open it again and visit this page once more.","Sie haben das Formular erst nach %s abgesendet. Das ist ziemlich langsam und deutet eher auf einen Spam Bot als auf eine echte Person hin. Bitte senden Sie das Formular das nächste Mal innerhalb von %s ab. Sie sind nun gesperrt. Um die Sperrung aufzuheben schließen Sie bitte Ihren Browser, öffnen ihn erneut und besuchen Sie diese Seite noch einmal.",,site/modules/FrontendForms/Formelements/Form.php,2447d344db3fb15973b24ddd51a615b8
 en,de,description,file,hash
-"Your account has been successfully deleted.","Ihr Konto wurde erfolgreich gelöscht.",,site/modules/FrontendLogin/pages/DeleteAccountPage.php,0743cd2f951c8ad9615bf579d95a79df
-"Delete account","Konto löschen",,site/modules/FrontendLogin/pages/DeleteAccountPage.php,e6e049c44a797fda2a175d07df838e49
-"Your deletion link is expired. It was only valid for 5 minutes. Please request for a new deletion link.","Ihr Löschungs-Link ist abgelaufen. Dieser war nur für 5 Minuten gültig. Bitte fordern Sie einen neuen Löschungs-Link an.",,site/modules/FrontendLogin/pages/DeleteAccountPage.php,2ad1ec30eab57c47af277f2070fb2072
+"Global settings","Globale Einstellungen",,site/modules/FrontendForms/FrontendForms.module,108490afa8365531d5eade07c3cc38f4
+"Make your global settings according to your preferences.","Setzen Sie die globalen Einstellungen anhand Ihrer Präferenzen.",,site/modules/FrontendForms/FrontendForms.module,f001f2c629a1b862d9f5330eaf01f9f8
+"Required fields setting","Pflichtfelder Einstellungen",,site/modules/FrontendForms/FrontendForms.module,d159aa88cb827bf0011a041e90b5567d
+"Add asterisk on required fields","Einen Asterisk bei Pflichtfeldern hinzufügen",,site/modules/FrontendForms/FrontendForms.module,cfb2041be23a5d67d9a2ab9b55afc30a
+"Adds a span element with an asterisk after the field label on required fields.","Fügt ein span Element mit einem Asterisk nach dem Label Tag bei Pflichtfeldern ein.",,site/modules/FrontendForms/FrontendForms.module,5a794347b17c4bfc0712504a53c9c4de
+"You can also use CSS pseudo class :after to add an asterisk to the label tag. For this reason you can disable the asterisk markup.","Sie können auch die CSS Pseudo-Klasse :after nutzen um einen Asterisk nach dem Label Tag einzufügen. Aus diesem Grund können Sie die Einfügung des Asterisk Mark-up unterbinden.",,site/modules/FrontendForms/FrontendForms.module,52fe89faf69cb2128424b868ece04de9
+None,kein,,site/modules/FrontendForms/FrontendForms.module,6adf97f83acf6453d4a6a4b1070f3754
+Top,oben,,site/modules/FrontendForms/FrontendForms.module,a4ffdcf0dc1f31b9acaf295d75b51d00
+Bottom,unten,,site/modules/FrontendForms/FrontendForms.module,2ad9d63b69c4a10a5cc9cad923133bc4
+"Disable displaying of the text (none), place the text before (top) or after (bottom) the form.","Die Anzeige des Textes unterbinden (kein), den Text vor (oben) oder nach (unten) dem Formular anzeigen.",,site/modules/FrontendForms/FrontendForms.module,8842b7eaca395f94ccf4247a3dec7fb2
+"Enable/disable the display of the required text and set the position","Anzeigen/verstecken der Anzeige des Textes für die Pflichtfelder und Festsetzung der Position",,site/modules/FrontendForms/FrontendForms.module,419482be203a6d6e6ca5dfab534db3c4
+"Can be overwritten on each form.","Kann bei jedem Formular überschrieben werden.",,site/modules/FrontendForms/FrontendForms.module,a310d89389c61c1262dc8b170e54b418
+"Remove wrappers from the form fields","Wrapper vom Formularfeld entfernen",,site/modules/FrontendForms/FrontendForms.module,12bb4097ffabbb810dbd25d9d5186d83
+"Remove wrapper div from inputfield (input wrapper)","Den umgebenden Div-Container vom Inputfeld entfernen (input wrapper)",,site/modules/FrontendForms/FrontendForms.module,5f168fdf4aa3fae4a28ff0161df2922c
+"Remove outer wrapper from each formfield (field wrapper)","Den umgebenden, äußersten Div-Container vom gesamten Formularfeld entfernen (field wrapper)",,site/modules/FrontendForms/FrontendForms.module,5e29a260cd765ca80ea487af068c1b26
+"Javascript setting","JavaScript Einstellung",,site/modules/FrontendForms/FrontendForms.module,c454d41006c3a47ef050056608a6b7d9
+"Remove frontendforms.js from template","Die Einbindung der JavaScript Datei frontendform.js beim Template unterbinden",,site/modules/FrontendForms/FrontendForms.module,408055a818bddf79f9d303fca270a4d4
+"A small JavaScript for a seconds counter and show/hide passwords will be added to the template by default before the closing body tag. You can remove it by checking the box.","Eine kleine JavaScript Datei für einen Sekundenzähler und für die anzeigen/verstecken Funktion bei Passwortfeldern wird vor dem schließenden Body Tag im Template eingefügt. Durch Markieren der Box kann dies unterbunden werden.",,site/modules/FrontendForms/FrontendForms.module,66962fb2a0ec9c78cce2a46df5613175
+"HTML5 required attribute setting","HTML5 Pflichtfeld Attribut Einstellungen",,site/modules/FrontendForms/FrontendForms.module,9354ec4ea74a63b6b84ec8f7dab4f5a9
+"Add HTML5 required attribute to inputs","HTML5 required Attribute zu Eingabefeldern hinzufügen",,site/modules/FrontendForms/FrontendForms.module,224e7105ad450ae2ed2358c26078d8aa
+"By default the HTML5 required attribute will not be added to form inputs if they are required. If you want to add it to all required fields please check the box.","Standardmäßig wird das HTML5 Attribute required nicht bei Pflichtfeldern eingebunden. Wenn Sie dieses Attribut einfügen wollen, dann markieren Sie bitte diese Box.",,site/modules/FrontendForms/FrontendForms.module,f6fa51f65c1493aa0e1310fef5d833a4
+"Output rendering","Ausgabe rendern",,site/modules/FrontendForms/FrontendForms.module,e22428c686e2484d13fe958b6dd96ded
+"Select a framework for the markup output if you want","Wählen Sie ein Framework aus, wenn Sie möchten",,site/modules/FrontendForms/FrontendForms.module,14b846454644dd336e00af738a46bf19
+"No framework",Keines,,site/modules/FrontendForms/FrontendForms.module,672c694e3c32de003ed77fa07f6420cc
+"HTML email template setting","HTML E-Mail Template Einstellungen",,site/modules/FrontendForms/FrontendForms.module,7ba64fb164e72d97660308b67acfefbe
+"no HTML template","kein HTML Template",,site/modules/FrontendForms/FrontendForms.module,7a646761a1d8fa416125a58d609c221d
+"Choose whether you want to use the HTML template for your emails and if so, which one.","Entscheiden Sie, ob Sie ein HTML Template für Ihre E-Mails verwenden wollen, oder nicht",,site/modules/FrontendForms/FrontendForms.module,cebf3687d25bd4915ed8816bf8f91604
+"If you are using FrontendForms with the PW WireMail class to send emails, you can use a HTML email template by adding the addEmailTemplate() method to the WireMail object.","Wenn Sie FrontendForms mit der ProcessWire WireMail Klasse zum E-Mail Versand verwenden, dann können Sie zum Versand ein HTML Template verwenden indem Sie die mailTemplate() Methode mit dem WireMail Objekt verwenden.",,site/modules/FrontendForms/FrontendForms.module,11d754ee1189767f57cc5cc48e82f436
+"CSS class for the %s","CSS Klasse für %s",,site/modules/FrontendForms/FrontendForms.module,3e17fd7790ba1feceace786e775d2ba7
+"Custom CSS classes","Eigene CSS Klasse",,site/modules/FrontendForms/FrontendForms.module,2aa8d951a33a4ede2260e61e9030b6d7
+"You can overwrite each default CSS class with your own class name(s). If you want to add multiple classes at the same time please separate them with a whitspace (fe class1 class2).","Sie können jede CSS Klasse mit ihren eigenen Bezeichnungen überschreiben. Wenn Sie gleichzeitig mehrere Klassen hinzufügen möchten, dann trennen Sie diese bitte mit einem Leerzeichen (z.B. class1 class2).",,site/modules/FrontendForms/FrontendForms.module,70f2a7e0486c10b2feb382c67555a482
+"Default is:",Standard-Klasse:,,site/modules/FrontendForms/FrontendForms.module,670fea5dc2d7d54a80c95b2efa9ba83c
 en,de,description,file,hash
-"A link to complete your account deletion was sent to your email address.","Ein Link zur Löschung Ihres Kontos wurde an Ihre E-Mail Adresse gesendet.",,site/modules/FrontendLogin/pages/DeleteRequestPage.php,7aeca01526bdf67b124196746bb02aba
-"Get deletion link","Löschungs-Link anfordern",,site/modules/FrontendLogin/pages/DeleteRequestPage.php,d6b6e377be84a01595726f2d7fc78624
-"Dear user","Sehr geehrter Nutzer",,site/modules/FrontendLogin/pages/DeleteRequestPage.php,f1417eb306e7cd4afb0f3546d7bfa30f
-"You will receive this email, because you have requested a deletion link for your account at %s.","Sie erhalten diese E-Mail, weil ein Löschungs-Link für Ihr Konto auf %s angefordert wurde.",,site/modules/FrontendLogin/pages/DeleteRequestPage.php,9763872dacb23fc63f5fc2474eb849d5
-"Please click the link to delete your account, but please note that this link is valid for 5 minutes only.","Bitte klicken Sie auf diesen Link, um Ihr Konto zu löschen. Bitte beachten Sie aber, dass dieser Link nur für 5 Minuten gültig ist.",,site/modules/FrontendLogin/pages/DeleteRequestPage.php,fc0f2afc20b45ba8f5cd734c39e25075
-"Action required to delete your account permanently","Aktion erforderlich, um Ihr Konto zu dauerhaft löschen",,site/modules/FrontendLogin/pages/DeleteRequestPage.php,d828f98420fcbb2b6a63f795b80d94f6
+Gender,Anrede,,site/modules/FrontendForms/Formelements/Inputelements/Select/defaults/Gender.php,019ec3132cdf8ee0f2e2a75cf5d3e459
+Mister,Herr,,site/modules/FrontendForms/Formelements/Inputelements/Select/defaults/Gender.php,c4f448df316abb13eb7eada722c57902
+Miss,Frau,,site/modules/FrontendForms/Formelements/Inputelements/Select/defaults/Gender.php,e7ddb7cd777b59610b220bcfa80bd95f
 en,de,description,file,hash
-"If we are able to find an account for the email address supplied, an email with further instructions will be sent to your email address. Please check your email account within the next few minutes, including any junk or spam folders.","Wenn wir ein Konto für die angegebene E-Mail-Adresse finden können, wird eine E-Mail mit weiteren Anweisungen an diese E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihr E-Mail-Konto innerhalb der nächsten Minuten, einschließlich Junk- oder Spam-Ordner.",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,92a085ec539c064d2ec24ce383b0def1
-"Recover password","Passwort wiederherstellen",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,50e63ff81efd77612d085e41e76f81d3
-"Request login data","Anmeldedaten anfordern",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,cde45d6d9673c9fcb5a15c29b9af486a
-"Dear user","Sehr geehrter Nutzer",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,f1417eb306e7cd4afb0f3546d7bfa30f
-"login data (password and/or username)","Anmeldedaten (Passwort und/oder Benutzername)",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,eba58d3e17dc85feda5375d1a0df5744
-password,Passwort,,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,5f4dcc3b5aa765d61d8327deb882cf99
-"You will receive this email, because someone has requested the %s for your account at %s.","Sie erhalten diese E-Mail, weil jemand %s für Ihr Konto bei %s angefordert hat.",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,6726ca1b89b970cd609a8fb413b7c0b9
-"For security reasons, we do not send the %s so you have to create the new %s by clicking the following link:","Aus Sicherheitsgründen senden wir das %s nicht. Aus diesem Grund müssen Sie ein neues %s erstellen, indem Sie auf den folgenden Link klicken:",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,698b3a3f2095765e163c1414103ade04
-"If you did not request a login data reset, please ignore this email.","Wenn Sie kein Zurücksetzen der Anmeldedaten angefordert haben, ignorieren Sie bitte diese E-Mail.",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,7c7e35f83221ec0509ef0f5184560a33
-"login data",Anmeldedaten,,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,cc81b9a7fbad434daee43bf70c9e1ac7
-"Action required to reset your %s","Aktion erforderlich, um %s zurück zu setzen",,site/modules/FrontendLogin/pages/ForgotLogindataPage.php,a9617c66ee842332161c7b2522094baa
+"The password must be at least %s characters and must contain characters of the following categories: %s.","Das Passwort muss mindestes %s Zeichen lang sein und folgende Zeichen enthalten: %s.",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/InputPassword.php,8bc6641f570b88866300ca703223bf6b
+"The password must be at least %s characters.","Das Passwort muss mindestes %s Zeichen lang sein.",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/InputPassword.php,3d55c273179acb11e30d1a53f8d8625e
+"Show password","Passwort anzeigen",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/InputPassword.php,a1cc7ba89ca3016cf59d7c31506a9681
 en,de,description,file,hash
-"Activation code",Aktivierungscode,,site/modules/FrontendLogin/FrontendLogin.module,008aeca484f4370679310037e98baa88
-"This field holds the activation code if account was not activated, otherwise it is empty.","Dieses Feld beinhaltet den Aktiverungscode, wenn der Account noch nicht aktiviert wurde. Ansonsten ist es leer.",,site/modules/FrontendLogin/FrontendLogin.module,8510cce68342b048165e728c4d44cd2a
-"Account verified","Konto bestätigt",,site/modules/FrontendLogin/FrontendLogin.module,5f86b92860f7ffd7492f8af58d9037b4
-"This field holds the date/time when the user verified his account, otherwise it is empty.","Dieses Feld beinhaltet das Datum und die Zeit, wann der Account verifiziert wurde. Ansonsten ist es leer.",,site/modules/FrontendLogin/FrontendLogin.module,36301ab33ef7afdffd670dcf581ab65c
-"Reminder sent date/time","Datum/Zeit Erinnerungs-E-Mail",,site/modules/FrontendLogin/FrontendLogin.module,14e102fc2f55a6edaa3ee2c46adf4200
-"This field holds the date/time when the reminder email was sent, otherwise it is empty.","Dieses Feld beinhaltet das Datum und die Zeit, wann die Erinnerungs-E-Mail gesendet wurde. Ansonsten ist es leer.",,site/modules/FrontendLogin/FrontendLogin.module,ead714521805efaa7c7131293a7efe63
-"Password recovery code","Passwort-zurücksetzen Code",,site/modules/FrontendLogin/FrontendLogin.module,713ceb511bc0951301b4b8ce88f38eaa
-"This field holds the recovery code if the user has forgotten his password, otherwise it is empty.","Dieses Feld beinhaltet den Password-zurücksetzen-Code, wenn der Nutzer ein neues Passwort angefordert hat. Ansonsten ist es leer.",,site/modules/FrontendLogin/FrontendLogin.module,ac94304ff2aeefbd3acb5f9c8485aec8
-"Password recovery date/time","Datum/Zeit Passwortzurücksetzung",,site/modules/FrontendLogin/FrontendLogin.module,7c3ac4975d92b82de7b9a79d1a964597
-"This field holds the date/time when the recovery code was created, otherwise it is empty.","Dieses Feld beinhaltet das Datum und die Zeit, wann der Password-zurücksetzen-Code erstellt wurde. Ansonsten ist es leer.",,site/modules/FrontendLogin/FrontendLogin.module,f0f547d6d37c102bd34f845cfc4de757
-"Account deletion code",Konto-Löschungs-Code,,site/modules/FrontendLogin/FrontendLogin.module,ac07b18a1ce48cd8aeb3b47eca029a92
-"This field holds the deletion code if the user wants to delete his account, otherwise it is empty.","Dieses Feld enthält den Code zum Löschen des Kontos, anderenfalls ist dieses Feld leer.",,site/modules/FrontendLogin/FrontendLogin.module,c231f52f4a4da7c76718ac92a404ffce
-"Account deletion date/time","Konto Löschung Datum/Zeit",,site/modules/FrontendLogin/FrontendLogin.module,98169a5545d9bc48686533b1697e2b5f
-"This field holds the date/time when the deletion code was created, otherwise it is empty.","Dieses Feld enthält das Datum und die Zeit als der Löschen-Code erstellt wurde, anderenfalls ist dieses Feld leer.",,site/modules/FrontendLogin/FrontendLogin.module,84a008e4ec59b7d143e4f0041e10482a
-Registration,Registrierung,,site/modules/FrontendLogin/FrontendLogin.module,0f98b7f230f3c91292f0de4c99e263f2
-"Register for an account and get access to non-public pages. It is free.","Registrieren Sie sich und erhalten Sie Zugang zu nicht öffentlichen Seiten. Es ist gratis.",,site/modules/FrontendLogin/FrontendLogin.module,2562a70723c3aade96730a9867831ae4
-Login,Anmeldung,,site/modules/FrontendLogin/FrontendLogin.module,99dea78007133396a7b8ed70578ac6ae
-"On this site you can login, if you have signed up for an account","Auf dieser Seite können Sie sich anmelden, wenn Sie sich bereits registriert haben.",,site/modules/FrontendLogin/FrontendLogin.module,2ebca4df0e15b30b2cf59337f6ac3ecb
-Logout,Abmeldung,,site/modules/FrontendLogin/FrontendLogin.module,0323de4f66a1700e2173e9bcdce02715
-"This is the logout page to left the private area if you are logged in.","Dies ist die Abmeldeseite um den geschlossenen Bereich zu verlassen, falls Sie angemeldet sind.",,site/modules/FrontendLogin/FrontendLogin.module,aa9ec7e98f63c9748e9b47724c48a41a
-Profile,Profil,,site/modules/FrontendLogin/FrontendLogin.module,cce99c598cfdb9773ab041d54c3d973a
-"On this page you can update your personal data such as password, username email address and more.","Auf dieser Seite können Sie Ihre persönlichen Daten wie Passwort, Benutzername, E-Mail-Adresse und andere aktualisieren.",,site/modules/FrontendLogin/FrontendLogin.module,d8d6b9c3d0fd6c5d9b924e180c0211e8
-"Request your login data","Zugangsdaten anfordern",,site/modules/FrontendLogin/FrontendLogin.module,1753bb4531e557654d12b71c6ed98fd6
-"If you have forgotten your login data, please enter your email address and you will get an email to reset your login data.","Wenn Sie Ihre Zugangsdaten vergessen haben, dann geben Sie bitte Ihre E-Mail-Adresse ein und eine Mail um Ihre Zugangsdaten zurückzusetzen wird an Sie gesendet.",,site/modules/FrontendLogin/FrontendLogin.module,57fc03026b737456f06259bfa9ed9067
-"Create new login data","Neue Zugangsdaten erstellen",,site/modules/FrontendLogin/FrontendLogin.module,21aef00a23a6f3f19c70ef7daddea1a8
-"If you have forgotten your login data you can request on this page for an email to get a link to create the new login data","Wenn Sie Ihre Zugangsdaten vergessen haben, dann können Sie auf dieser Seite eine E-Mail anfordern, welche einen Link enthält, mit welchem Sie neue Zugangsdaten erstellen können",,site/modules/FrontendLogin/FrontendLogin.module,6205c4a15892ef7ebc7a72a61f4dd20d
-"Account activation","Konto Aktivierung",,site/modules/FrontendLogin/FrontendLogin.module,ef5872ccb6ea77c26a046f51371a6043
-"On this page your account will be activated if you have sent the correct activation code.","Auf dieser Seite können Sie Ihren Account aktivieren, indem Sie den richtigen Aktivierungscode mitsenden.",,site/modules/FrontendLogin/FrontendLogin.module,96ff718c4607a1863f1cd642ef964d76
-"Account deletion","Konto Löschung",,site/modules/FrontendLogin/FrontendLogin.module,dee12d83249dd7abd9012ae73fc3b012
-"On this page you can request for a deletion link to delete your account permanently.","Auf dieser Seite können Sie einen Link zur Löschung Ihres Kontos beantragen, um Ihr Konto dauerhaft zu löschen.",,site/modules/FrontendLogin/FrontendLogin.module,23ac96093ddff47f7ac65de3ead3c585
-"Account deletion confirmation","Bestätigung der Konto-Löschung",,site/modules/FrontendLogin/FrontendLogin.module,cf17d29e95d5dd8e91806a4d8a0879dc
-"Confirmation page after clicking the deletion link.","Bestätigungsseite, nachdem Sie den Löschen-Link geklickt haben.",,site/modules/FrontendLogin/FrontendLogin.module,663c26c7adbf7f1c1af75021d06883e8
-"All titles for the pages were added in %s.","Alle Überschriften wurden in %s zu den Seiten hinzugefügt.",,site/modules/FrontendLogin/FrontendLogin.module,7fc234bb8ef2ff637c923bc510d96cc8
-"All titles and description for the pages and for SeoMaestro fields were added in %s.","Alle Überschriften und Beschreibungen wurden in %s zu den Seiten und SeoMaestro-Feldern hinzugefügt.",,site/modules/FrontendLogin/FrontendLogin.module,c2f1e75cb20f163c00b118187686ada4
-"Field email was set to unique, because you have choosen email and password as login data.","Das Feld mit der E-Mail wurde auf einzigartig (unique) gesetzt, weil Sie E-Mail und Passwort als Anmeldedaten ausgewählt haben.",,site/modules/FrontendLogin/FrontendLogin.module,0ae99b1baa941580cd34d47d009eaa01
-Hours,Stunden,,site/modules/FrontendLogin/FrontendLogin.module,6a7e73161603d87b26a8eac49dab0a9c
-"The time after which the user should be deleted must be higher than the time after which the reminder should be sent.","Die Zeit, nachdem der Nutzer gelöscht werden soll, muss nach der Zeit sein, zu welcher das Erinnerungsmail geschickt werden soll.",,site/modules/FrontendLogin/FrontendLogin.module,f98e39ad0d787df570cbba98bc9120c7
-"%s form fields","%s Formular Felder",,site/modules/FrontendLogin/FrontendLogin.module,030a8dd567f5606ce0d0e8cdf51183ed
-"General settings","Allgemeine Einstellungen",,site/modules/FrontendLogin/FrontendLogin.module,de62775a71fc2bf7a13d7530ae24a7ed
-"Login and/or registration","Anmeldung und/oder Registrierung",,site/modules/FrontendLogin/FrontendLogin.module,0c70d6134a145544ab7cc31c7c08a8e6
-"Choose whether you want only a user login or a combined login and registration.","Bitte wählen Sie aus, ob Sie nur eine Benutzeranmeldung oder eine kombinierte Anmeldung/Registrierung ermöglichen wollen.",,site/modules/FrontendLogin/FrontendLogin.module,21e17f2cb93d376cad73a6d8c7563113
-"Login and registration","Anmeldung und Registrierung",,site/modules/FrontendLogin/FrontendLogin.module,d9da38a97856e064ae4ee4e28356ae6b
-"Login only","Nur Anmeldung",,site/modules/FrontendLogin/FrontendLogin.module,2c8ce8d388acc2233e1ea020c3dbf754
-"By selecting ""Login only"", the registration and activation page will be disabled.","Wenn Sie ""Nur Anmeldung"" auswählen, dann werden die Aktivierungs- und Registrierungsseite deaktiviert.",,site/modules/FrontendLogin/FrontendLogin.module,7cce3991bf442fbfda1293c2afde0f51
-"Email HTML template","E-Mail HTML Vorlage",,site/modules/FrontendLogin/FrontendLogin.module,68fe21d1830d41680d6ccb3235ae4803
-"inherit from FrontendForms settings","Vom Modul FrontendForms die Einstellungen übernehmen",,site/modules/FrontendLogin/FrontendLogin.module,78325c4af90ffc228c3798aa64c67ad1
-"no HTML template (plain text only)","kein HTML Template (nur reiner Text)",,site/modules/FrontendLogin/FrontendLogin.module,768e9766bf4b93f28bb332609b8e7429
-"Please select whether you would like to use a mail template and, if so, which one.","Bitte wählen Sie aus, ob Sie eine Vorlage für die E-Mails verwenden möchten und wenn ja welche.",,site/modules/FrontendLogin/FrontendLogin.module,585915f2aaf18171b40ca70059dfb624
-"Inherit from FrontendForms will take the setting from this module.","Die Übernahme von FrontendForms bedeutet, dass die dort eingestellten Werte übernommen werden.",,site/modules/FrontendLogin/FrontendLogin.module,0a6eca4828ea7f3fa67e27f3e5920330
-"From email address","Absender E-Mail-Adresse",,site/modules/FrontendLogin/FrontendLogin.module,6f6da7aec649851c977b6bf4e083977d
-"fe. noreply@mycompany.com","z.B. noreply@mycompany.com",,site/modules/FrontendLogin/FrontendLogin.module,809d7e39d76a2b118a47b92b583e9dee
-"This email address will be displayed as the sender of the various emails sent by this module.","Diese E-Mail Adresse wird als Absender der verschiedenen E-Mails angezeigt, welche von diesem Modul verschickt werden.",,site/modules/FrontendLogin/FrontendLogin.module,bba80481a63f4262b9985030bd3bd371
-"If no email address will be entered, than %s will be used as sender email address.","Wenn keine E-Mail-Adresse eingegeben wird, dann wird stattdessen %s als Absender-Adresse angezeigt",,site/modules/FrontendLogin/FrontendLogin.module,601cb05ad7ac07b0976676aa093fc77d
-"From name","Absender Name",,site/modules/FrontendLogin/FrontendLogin.module,c3a7ea0c38bac179a545dbfaf4ebb013
-"fe. My company","z.B. Musterfirma XY",,site/modules/FrontendLogin/FrontendLogin.module,8eea8281628fde6ba6c3589554795bd2
-"This name will be displayed as the sender of the various emails sent by this module.","Dieser Name wird als Absender der E-Mails angezeigt, welche von diesem Modul aus verschickt werden.",,site/modules/FrontendLogin/FrontendLogin.module,630313ce526f9fba91fe520a5a63e049
-"If no sender name will be entered, than %s will be used as the sender name.","Wenn kein Absendername angegeben ist, dann wird stattdessen %s als Absender angegeben.",,site/modules/FrontendLogin/FrontendLogin.module,0b898628f6b1cbdef5dc423b7095016c
-"Date/time format","Datum/Zeit Format",,site/modules/FrontendLogin/FrontendLogin.module,6abdd13867a913f108832d74a1ec817f
-"fe. Y-m-d H:i","z.B. Y-m-d H:i",,site/modules/FrontendLogin/FrontendLogin.module,f5acf72d5e697abd8a51056e8f52ea7f
-"Enter the format which should be used for the date/time strings in the email templates.","Geben Sie das Format ein, welches für Datum/Zeitangaben in den E-Mail-Vorlagen verwendet werden soll.",,site/modules/FrontendLogin/FrontendLogin.module,429ea8aca0ace3d603549373ba0748f3
-"By default, the default value (%s) from the configuration file will be used.","Standardmäßig wird die Standardformatierung (%s) aus der Konfiguration verwendet.",,site/modules/FrontendLogin/FrontendLogin.module,831f213c874429eedf09685b076dc644
-"Login settings",Anmeldungs-Einstellungen,,site/modules/FrontendLogin/FrontendLogin.module,c50bcdf91916f47e39976a3fc267faae
-"Select login option ","Anmeldung-Optionen",,site/modules/FrontendLogin/FrontendLogin.module,5546736870a179bef93d4dab59779d76
-"Login with email and password","Mit E-Mail und Passwort anmelden",,site/modules/FrontendLogin/FrontendLogin.module,f3d57aeef905677f6e19ce929fcd712f
-"Login with username and password","Mit Benutzername und Passwort anmelden",,site/modules/FrontendLogin/FrontendLogin.module,94202bc85f56af32d436b77d93d9dbbc
-"Select your prefered login type.","Wählen Sie Ihren gewünschten Anmeldetypus aus",,site/modules/FrontendLogin/FrontendLogin.module,f850941eccbf596ff268066edbc29b17
-"Please note: If login with email and password will be selected, than the email value will be set to be unique in the email field settings.","Bitte beachten Sie: Wenn Sie als Anmeldedaten E-Mail und Passwort auswählen, dann wird das Feld für die E-Mail-Adresse auf einzigartig (unique) gesetzt.",,site/modules/FrontendLogin/FrontendLogin.module,dc64dc83df7ee1875efc9e3a90cf461a
-Redirection,Weiterleitung,,site/modules/FrontendLogin/FrontendLogin.module,1b6498e23a3c43775699129e7ebfcfeb
-"Stay on the login page","Auf der Anmeldeseite bleiben",,site/modules/FrontendLogin/FrontendLogin.module,218b5a4826e55fdce5e05c05bf397e62
-"Redirect to the previous visited page","Zur vorher besuchten Seite zurückleiten",,site/modules/FrontendLogin/FrontendLogin.module,65dd73c83c2861859ab887694e610f9c
-"Select the page where you want to redirect after successful login.","Wählen Sie die Seite aus, zu welcher nach einer erfolgreichen Anmeldung weitergeleitet werden soll.",,site/modules/FrontendLogin/FrontendLogin.module,3149f517a20eae63b8080d48da6a13e9
-"2-factor authentication","2-Faktor Authentifizierung",,site/modules/FrontendLogin/FrontendLogin.module,30be142d5d4aba22664ae71bcd0d9aaa
-"Enable 2-factor authentication","2-Faktor-Authentifizierung aktivieren",,site/modules/FrontendLogin/FrontendLogin.module,f4ea6c5bde3fa3e70ec00b3c66027b08
-"If the box is checked, then TfaEmail will be used as 2-factor authentication.","Wenn die Box angekreuzt ist, dann wird das TfaEmail Modul als 2-Faktor-Authentifizierung verwendet.",,site/modules/FrontendLogin/FrontendLogin.module,b28a8a1b2ebf7a13d6362716ce63f29a
-"TfaEmail is not installed. To use this feature you have to download and install %s first.","TfaEmail Module ist nicht installiert. Um diese Anwendung zu nutzen, müssen Sie zuerst %s herunterladen und installieren.",,site/modules/FrontendLogin/FrontendLogin.module,a6a47851203dc0f6d84c746b6908aac9
-"TfaEmail is installed. For higher security it is recommended to use 2-factor authentication.","TfaEmail Modul ist installiert. Für höhere Sicherheit wird empfohlen, die 2-Faktor-Authentifizierung zu verwenden.",,site/modules/FrontendLogin/FrontendLogin.module,ed4fc5b7518c37d1dc5cd23229fcacaf
-"Security settings",Sicherheits-Einstellungen,,site/modules/FrontendLogin/FrontendLogin.module,b5ab15c6389dfe058d163fcf2d42f0f2
-"Log failed login attempts","Fehlgeschlagene Anmeldeversuche loggen",,site/modules/FrontendLogin/FrontendLogin.module,041841ff849c72f0c15b34f0d6dc754c
-"If the box is checked, an entry with the IP address of a guest will be stored in the logfiles if the guest will be blocked after failed login attempts.","Wenn die Box markiert ist, dann wird die IP-Adresse eines Gastes in den Log-Dateien gespeichert, sobald dieser durch fehlerhafte Anmeldeversuche gesperrt wird.",,site/modules/FrontendLogin/FrontendLogin.module,f8d0bf267b3029f2adfbb06bd805fe2f
-"Please note, that you have to inform your users, that the IP address will be stored in this case.","Bitte beachten Sie, dass Sie ihre Gäste darüber informieren müssen, dass ihre IP-Adresse in diesem Fall gespeichert wird.",,site/modules/FrontendLogin/FrontendLogin.module,1289bb7ce2b651e97865357bfd6c85d1
-"Forbidden Continents","Verbotene Kontinente",,site/modules/FrontendLogin/FrontendLogin.module,e879ea3d45235f784a214fab4ec0850f
-"Select the continents from where visitors are not allowed to visit the pages of this module.","Wählen Sie die Kontinente aus, von denen Besucher vom Besuch der Seiten dieses Moduls ausgeschlossen werden sollen.",,site/modules/FrontendLogin/FrontendLogin.module,5ab012cc7af27a9cc9d2289e7b912f02
-Africa,Afrika,,site/modules/FrontendLogin/FrontendLogin.module,f5cd262901883dff68d06b215fb0f28e
-Antarctica,Antarktis,,site/modules/FrontendLogin/FrontendLogin.module,44b439ba9975f8e802b456777c54a854
-Asia,Asien,,site/modules/FrontendLogin/FrontendLogin.module,154a67340e8c14dd5253dc4ff6120197
-Europe,Europa,,site/modules/FrontendLogin/FrontendLogin.module,912d59cdf1d3f551fae21f6f0062258f
-"North america",Nord-Amerika,,site/modules/FrontendLogin/FrontendLogin.module,b4964c8fbe821eb7da520a2cca973660
-Oceania,Ozeanien,,site/modules/FrontendLogin/FrontendLogin.module,2d8836190888267b97ce332cad2aa247
-"South america",Süd-Amerika,,site/modules/FrontendLogin/FrontendLogin.module,0af209df74716a4bf822bcc9b56b4b0a
-"If you have discovered more attacks from a continent, then you can exclude visitors from that continent.","Wenn Sie von einem Kontinent vermehrt Angriffsversuche feststellen, dann können Sie Besucher von diesem Kontinent ausschließen.",,site/modules/FrontendLogin/FrontendLogin.module,647491a7d7100b5d3408fea87d1b09d9
-"Prevent these IP addresses from visiting pages of this module on the frontend.","Diese IP-Adressen vom Besuch der Seiten dieses Moduls ausschließen.",,site/modules/FrontendLogin/FrontendLogin.module,b2fa7527b945791d763369e829f058a0
-"Every visit of an IP address entered below will be redirected to the homepage.","Jeder Besuch einer der unten angeführten IP-Adressen wird auf die Startseite umgeleitet.",,site/modules/FrontendLogin/FrontendLogin.module,38b1528a82ba0162f7eb4ae779f46a93
-"Please enter every IP address on a new line. Tipp: You can take a look at the logfile for failed login attempts and enter fe. IP addresses that appear very often.","Bitte geben Sie jede IP-Adresse in einer neuen Zeile ein. Tipp: Sie können in den Log-Dateien für fehlgeschlagene Anmeldeversuche nachsehen und IP-Adressen, welche sehr oft vorkommen, eintragen.",,site/modules/FrontendLogin/FrontendLogin.module,9e24c848def181001f36041eb0545dab
-"Registration settings",Registrierungs-Einstellungen,,site/modules/FrontendLogin/FrontendLogin.module,8ca20688cf389baadf97cd060447734c
-"Sending reminder email","Erinnerung-E-Mail senden",,site/modules/FrontendLogin/FrontendLogin.module,cb1c96db701686d4a52af99ff4137611
-"After this time, set in the input field below, an email with a reminder to activate the account, will be sent to the user.","Nach der, im nachfolgenden Eingabefeld, eingegebenen Zeit wird eine Erinnerungsmail an den Nutzer gesendet, dass dieser seinen Account noch aktivieren muss.",,site/modules/FrontendLogin/FrontendLogin.module,aa2c3a043e6839cce96873fe6dd0e2d6
-"If you want to disable the sending of the reminder email, set the value to 0.","Wenn Sie die Sendung der Erinnerungs-E-Mail unterbinden wollen, dann geben Sie bitte den Wert 0 ein.",,site/modules/FrontendLogin/FrontendLogin.module,c468b62c3635a72c5b0a596e5f540363
-"Delete inactive account","Inaktives Benutzerkonto löschen",,site/modules/FrontendLogin/FrontendLogin.module,991a26932c5a8d68e7149cae353cd906
-"If the user has not verified his account, the account will be deleted after this time set.","Wenn der Nutzer seinen Account nicht bestätigt hat, dann wird dieser nach der ausgewählten Zeit gelöscht.",,site/modules/FrontendLogin/FrontendLogin.module,b70511f607f2765f6a08a81e0c603f94
-"If you want to disable the deletion of a user if the account was not activated within a certain time, set the value to 0.","Wenn Sie die Löschung unterbinden wollen, dann geben Sie bitte den Wert 0 ein.",,site/modules/FrontendLogin/FrontendLogin.module,e7183b1051ccaf079e973d55e794e7e1
-Roles,Rollen,,site/modules/FrontendLogin/FrontendLogin.module,a5cd3ed116608dac017f14c046ea56bf
-"Select the role(s) which should be added to newly registered users.","Wählen Sie die Rolle(n) aus, welche ein neue Benutzer erhalten soll.",,site/modules/FrontendLogin/FrontendLogin.module,fb006e4ada7f7ff5a3ece9e053779372
-"Please select which fields should be displayed on the frontend registration form.","Bitte wählen Sie die Felder aus, welche beim Registrierungsformular im Frontend angezeigt werden sollen.",,site/modules/FrontendLogin/FrontendLogin.module,80c53233639ee052db80d2cfa861dbc5
-"Account settings","Konto Einstellungen",,site/modules/FrontendLogin/FrontendLogin.module,8af703b2bf59cc9742883ae7f4cb0e5b
-"Allow users to delete their account on the profile page permanently","Nutzern erlauben ihr Konto im Frontend dauerhaft zu löschen",,site/modules/FrontendLogin/FrontendLogin.module,652083121300968b174e6eac41539821
-"If the box is checked, the user gets the opportunity to delete his account on his profile page.","Wenn die Box markiert ist, dann erhält der Benutzer die Möglichkeit sein Benutzerprofil in seiner Profilseite selbst zu löschen.",,site/modules/FrontendLogin/FrontendLogin.module,2317258f61b7a8c802aa10ccc603d0d0
-"Please select which fields should be displayed on the frontend profile form.","Bitte wählen Sie die Felder aus, welche beim Profilformular im Frontend angezeigt werden sollen.",,site/modules/FrontendLogin/FrontendLogin.module,328d2bdc9e3ec2b9c7d5277ddcf198ba
+Message,Nachricht,,site/modules/FrontendForms/Formelements/Inputelements/Textarea/defaults/Message.php,4c2a8fe7eaf24721cc7a9f0175115bd4
 en,de,description,file,hash
-"A technical problem occurs during the saving of the user data, so the user data could not be saved. Please try it once more. If the problem persists please contact the webmaster of this site.","Ein technisches Problem ist beim Speichern der Nutzerdaten aufgetreten, daher konnten diese nicht gespeichert werden. Bitte versuchen Sie es noch einmal. Wenn das Problem bestehen bleibt, dann kontaktieren Sie bitte den Webmaster von dieser Seite.",,site/modules/FrontendLogin/FrontendLoginPages.php,3f089898c07065dd94c875cd77091805
-"Change password","Passwort ändern",,site/modules/FrontendLogin/FrontendLoginPages.php,0b39c5aca15b84b1ad53a94d6b3feb78
-"Old password","Altes Passwort",,site/modules/FrontendLogin/FrontendLoginPages.php,062d2b8bc2cfac7772c75ae8090fb9d1
-"New password","Neues Passwort",,site/modules/FrontendLogin/FrontendLoginPages.php,3544848f820b9d94a3f3871a382cf138
-Language,Sprache,,site/modules/FrontendLogin/FrontendLoginPages.php,4994a8ffeba4ac3140beb89e8d41f174
-TFA,Zwei-Faktor-Authentifizierung,,site/modules/FrontendLogin/FrontendLoginPages.php,61bca12cd76652bf2fe763b5c4952066
+Name,Vorname,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Name.php,49ee3087348e8d44e1feda1917443987
 en,de,description,file,hash
-Cancel,Abbrechen,,site/modules/FrontendLogin/pages/LoginPage.php,ea4788705e6873b424c65e91c2846b19
-"Forgot password?","Passwort vergessen?",,site/modules/FrontendLogin/pages/LoginPage.php,8458bad978f4fd6d6c7f8ec2ec0824b4
-"Forgot login data?","Anmeldedaten vergessen?",,site/modules/FrontendLogin/pages/LoginPage.php,688a8c015589eb6d8210fa3de138e784
-"No Account? Register now!","Noch kein Konto? Jetzt registrieren!",,site/modules/FrontendLogin/pages/LoginPage.php,87a145d11f017601d8d00c49d25bebbb
-"Sorry, but you are not allowed to login.","Entschuldigung, aber Sie sind nicht berechtigt, sich anzumelden.",,site/modules/FrontendLogin/pages/LoginPage.php,20d64e96b46d5fc8b0ea2607487ca2a3
-"Your authentication code for %s","Ihr Authentifizierungscode für %s",,site/modules/FrontendLogin/pages/LoginPage.php,f56bd151a56c190540ee3c1e06099ef7
-"Use this code to login into your account","Verwenden Sie diesen Code, um sich bei Ihrem Konto anzumelden",,site/modules/FrontendLogin/pages/LoginPage.php,932026b21b11f7928c06318060a2f453
-"Dear user","Sehr geehrter Nutzer",,site/modules/FrontendLogin/pages/LoginPage.php,f1417eb306e7cd4afb0f3546d7bfa30f
-"Please use the code below to login into your account.","Bitte verwenden Sie den unten stehenden Code, um sich bei Ihrem Konto anzumelden.",,site/modules/FrontendLogin/pages/LoginPage.php,ee18b1b564fe7a3aab3317524cc7ad48
-"Please note: This code is only valid for 3 minutes.","Bitte beachten Sie: Dieser Code ist nur 3 Minuten gültig.",,site/modules/FrontendLogin/pages/LoginPage.php,09fc2ecdbca49a1faae86a5226882878
-"Unable to send email due to possible email configuration error.","E-Mail konnte aufgrund eines möglichen E-Mail-Konfigurationsfehlers nicht gesendet werden.",,site/modules/FrontendLogin/pages/LoginPage.php,3a5915b06657bb1cb6a363a6d011a2ff
-"Your session key is not valid.","Ihr Sitzungsschlüssel ist ungültig.",,site/modules/FrontendLogin/pages/LoginPage.php,d998c10a1ba0988f47024c49eb617b1f
-"Your code has expired. Please enter your data once more to get a new code.","Ihr Code ist abgelaufen. Bitte geben Sie Ihre Daten erneut ein, um einen neuen Code zu erhalten.",,site/modules/FrontendLogin/pages/LoginPage.php,4b20e04b5507c13eda2a67468befc92b
-"You are now logged in.","Sie sind jetzt angemeldet.",,site/modules/FrontendLogin/pages/LoginPage.php,7accc28b2ac5964e5495d8c5e9c1d158
-"The authentication code is not correct","Der Authentifizierungscode ist nicht korrekt",,site/modules/FrontendLogin/pages/LoginPage.php,e45fc711529f193749416464ff4b54b9
-Send,Senden,,site/modules/FrontendLogin/pages/LoginPage.php,94966d90747b97d1f0f206c98a8b1ac3
-"A code has been sent to you by email - please find it and enter it on this screen.","Ein Code wurde Ihnen per E-Mail zugesendet – bitte geben Sie ihn auf diesem Bildschirm ein.",,site/modules/FrontendLogin/pages/LoginPage.php,4a9df1eb3c5c90d32a497c2cd9a9e8a1
-"This code is still valid for %s seconds.","Dieser Code ist noch %s Sekunden gültig.",,site/modules/FrontendLogin/pages/LoginPage.php,fb344de9edd9e8df1c5bb661cc4317a5
-Login,Anmelden,,site/modules/FrontendLogin/pages/LoginPage.php,99dea78007133396a7b8ed70578ac6ae
-"You have not activated your account til now. To activate your account please follow the instructions inside the mail we have sent to you. Afterwards you will be able to login to the site.","Sie haben Ihr Konto noch nicht aktiviert. Um Ihr Konto zu aktivieren, folgen Sie bitte den Anweisungen in der E-Mail, die wir Ihnen gesendet haben. Anschließend können Sie sich auf der Seite anmelden.",,site/modules/FrontendLogin/pages/LoginPage.php,f3f4be447bd1faf1cd57d6105a7d2f13
+Password,Passwort,"set default label",site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Password.php,dc647eb65e6711e155375218212b3964
 en,de,description,file,hash
-"You have been successfully logged out.","Sie haben sich erfolgreich abgemeldet.",,site/modules/FrontendLogin/pages/LogoutPage.php,b62217857115d79e0b4f8c1ec570f203
+"Password Confirmation","Passwort Bestätigung","set default label",site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/PasswordConfirmation.php,c2b7527a6421ad4a0c0089d87290d1cd
 en,de,description,file,hash
-Update,Aktualisieren,,site/modules/FrontendLogin/pages/ProfilePage.php,06933067aafd48425d67bcb01bba5cb6
-Password,Passwort,,site/modules/FrontendLogin/pages/ProfilePage.php,dc647eb65e6711e155375218212b3964
-"Your account has been updated successfully. The following data has been changed: %s","Ihr Konto wurde erfolgreich aktualisiert. Folgende Daten wurden geändert: %s",,site/modules/FrontendLogin/pages/ProfilePage.php,27db4bce3b25f30a16037aee1543513e
-"No data has been changed, so there is no need to save your data.","Es wurden keine Daten geändert. Es wurde daher auch keine Speicherung durchgeführt.",,site/modules/FrontendLogin/pages/ProfilePage.php,98233559bb546739caf6c667754652d5
+"I accept the privacy policy","Ich akzeptiere die Datenschutzrichtlinien",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Privacy.php,28f678f8feb29d236b6dfcb02190ba21
+"You have to accept our privacy policy","Sie müssen die Datenschutzrichtlinien akzeptieren",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Privacy.php,9a5b98e025ebe5fd1adbddccc94ad638
 en,de,description,file,hash
-"Your new password has been saved and now you can log in into your account.","Ihr neues Passwort wurde gespeichert und Sie können sich jetzt bei Ihrem Konto anmelden.",,site/modules/FrontendLogin/pages/RecoveryLogindataPage.php,76a3f12b650825cccbd4909cfdf1722e
-"Your new login data have saved and now you can log in into your account.","Ihre neuen Anmeldedaten wurden gespeichert und Sie können sich jetzt bei Ihrem Konto anmelden.",,site/modules/FrontendLogin/pages/RecoveryLogindataPage.php,217e3ffa2f004d40447d49ee478c002f
-"If you also have forgotten your username, you can enter a new one here. Otherwise let this field empty and fill out only the password fields.","Wenn Sie auch Ihren Benutzernamen vergessen haben, können Sie hier einen neuen eingeben. Ansonsten lassen Sie dieses Feld leer und füllen Sie nur die Passwortfelder aus.",,site/modules/FrontendLogin/pages/RecoveryLogindataPage.php,9eb76acbafd509f118e594f63b97e13c
-"Show password confirmation","Passwortbestätigung anzeigen",,site/modules/FrontendLogin/pages/RecoveryLogindataPage.php,c015c2977a6ad7af1e7fef14a0db7870
-"Save new user data","Neue Benutzerdaten speichern",,site/modules/FrontendLogin/pages/RecoveryLogindataPage.php,9acedd01b22d701f581c22db46538f3e
+"Send a copy of my message to me","Eine Kopie dieser Nachricht an mich senden",,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/SendCopy.php,7313e5cce02f10d1d6a22dea1aedc9eb
 en,de,description,file,hash
-"Your account has been created successfully. To activate your account please follow the instructions inside the mail we have sent to you.","Ihr Konto wurde erfolgreich erstellt. Um Ihr Konto zu aktivieren, folgen Sie bitte den Anweisungen in der E-Mail, die gerade zu Ihnen gesendet wurde.",,site/modules/FrontendLogin/pages/RegisterPage.php,8eecb7df92e82a99920d5c7a785da780
-Register,Registrieren,,site/modules/FrontendLogin/pages/RegisterPage.php,0ba7583639a274c434bbe6ef797115a4
-"An error occured during the saving process of your data. Please try it once more.","Beim Speichern Ihrer Daten ist ein Fehler aufgetreten. Bitte versuchen Sie es noch einmal.",,site/modules/FrontendLogin/pages/RegisterPage.php,e9e7ec3f46398b60a4f1847d1c61b82e
-
+Subject,Betreff,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Subject.php,c7892ebbb139886662c6f2fc8c450710
+en,de,description,file,hash
+Surname,Nachname,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Surname.php,8e55577a8ed3b20bff65d23c000280d4
+en,de,description,file,hash
+Username,Benutzername,,site/modules/FrontendForms/Formelements/Inputelements/Inputs/defaults/Username.php,f6039d44b29456b20f8f373155ae4973
