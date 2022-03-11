@@ -479,19 +479,22 @@ class Form extends Tag
     {
         $bit = [
          'month' => floor($ss / 2592000),
-         'day' => floor(($ss % 2592000) / 86400),
+         'week' => floor(($ss % 2592000) / 604800),
+         'day' => floor(($ss % 604800) / 86400),
          'hour' => floor(($ss % 86400) / 3600),
          'minute' => floor(($ss % 3600) / 60),
          'second' => $ss % 60
         ];
 
         $labelSingular = ['month' => $this->_('month'),
+         'week' => $this->_('week'),
          'day' => $this->_('day'),
          'hour' => $this->_('hour'),
          'minute' => $this->_('minute'),
          'second' => $this->_('second')];
 
         $labelPlural = ['month' => $this->_('months'),
+         'week' => $this->_('weeks'),
          'day' => $this->_('days'),
          'hour' => $this->_('hours'),
          'minute' => $this->_('minutes'),
